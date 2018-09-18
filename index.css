@@ -1,0 +1,256 @@
+	*
+	{
+	box-sizing: border-box;
+	}
+	
+	a
+	{
+	font-family: Karla, sans serif;
+	font-size: 24pt;
+	color: white;
+	font-weight: bold;
+	text-transform: uppercase;
+	cursor: pointer;
+	text-decoration: none;
+	
+	transition: color 0.5s ease;
+	}
+	
+	p
+	{
+	font-family: Karla, sans serif;
+	font-size: 18pt;
+	color: white;
+	font-weight: bold;
+	text-transform: uppercase;
+	text-decoration: none;
+	}
+	
+	a.divLink
+	{
+	display: block;
+	}
+	
+	body
+	{
+	margin: 10vh, 40vw, 10vh, 40vw;
+	width: 1vw;
+	background-color: #143363;
+	}
+	
+	div
+	{
+	}
+	
+	.block
+	{
+	float:top;
+	position: relative;
+	background-color: black;
+	height: 10vh;
+	width: 25vw;
+	transition: height 0.5s ease, width 0.5s ease;
+	}
+	
+	.block:hover
+	{
+	background-color: #295499 !important;
+	height: 50vh;
+	width: 95vw;
+	padding: 0vw; !important;
+	display: block;
+	}
+	
+	.block:hover .dropdown-content
+	{
+	display: block;
+	color: red;
+	}
+	
+	.dropdown
+	{
+	height: 100%;
+	width: 3vw;
+	position: absolute;
+	display: block;
+	top: 0;
+	left: 0;
+	}
+	
+	.dropdown-content
+	{
+	width: 90vw;
+	height: 70%;
+	color: black;
+	display: none;
+	position: absolute;
+	top: 20%;
+	bottom: 10%;
+	left: 150%;
+	background-color: purple;
+	border-radius: 25px;
+	min-width: 160px;
+	padding: 12px 16px;
+	z-index: 1;
+	transition: all 0.5s ease;
+	}
+	
+	.dropdown-content p {
+		font-weight: normal;
+	}
+	
+	.dropText {
+	font-family: Karla, sans serif;
+	font-size: 16pt;
+	color: white;
+	text-decoration: none;
+	}
+	
+	.dropTextDiv {
+	width: 20%; 
+	float:left;
+	}
+	
+	.creditBlock {
+	width:1vw;
+	height:1vw;
+	position: fixed;
+	right:1%;
+	top:1%;
+	border-radius: 50%;
+	background-color: #ffffff;
+	transition: all 0.5s ease;
+	z-index: 2;
+	}
+	
+	.creditBlock:hover {
+	width:5vw;
+	height:5vw;
+	border-radius: 0%;
+	}
+	
+	.creditBlock:hover .creditDropdown-Content
+	{
+	display: block;
+	}
+	
+	.creditDropdown {
+	height: 100%;
+	width: 3vw;
+	position: absolute;
+	display: block;
+	top: 0;
+	right: 0;
+	}
+	
+	.creditDropdown-Content {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	right: 60%;
+	color: black;
+	display: none;
+	}
+	
+	.imgSmall img {
+		padding: 5px;
+		width:100%; 
+		height:100%; 
+		object-fit: fill;
+		overflow: hidden;
+	}
+	
+	.imgFull {
+		padding-left: 20px;
+		float:left;
+		width:80%; 
+		height:100%; 
+		overflow:hidden;
+	}
+	
+	.imgSmall {
+		width: 15%;
+		height:100%; 
+		float:left;
+		overflow:hidden;
+	}
+
+	
+	#firstBlock
+	{
+	padding: 10px;
+	border-radius: 25px;
+	background-color: #000000;
+	}
+	
+	#firstBlock .dropdown-content
+	{
+	background-color: #000000;
+	color: #888888;
+	}
+	
+	#secondBlock
+	{
+	padding:10px;
+	border-radius: 25px;
+	background-color: #222222;
+	}
+	
+	#secondBlock .dropdown-content
+	{
+	background-color: #222222;
+	color: #666666;
+	}
+	
+	#thirdBlock
+	{
+	padding: 10px;
+	background-color: #444444;
+	border-radius: 25px;
+	}
+	
+	#thirdBlock .dropdown-content
+	{
+	background-color: #444444;
+	color: #444444;
+	}
+	
+	#fourthBlock
+	{
+	padding: 10px;
+	background-color: #666666;
+	border-radius: 25px;
+	}
+	
+	#fourthBlock .dropdown-content
+	{
+	background-color: #666666;
+	color: #222222;
+	}
+	
+	#fifthBlock
+	{
+	padding: 10px;
+	background-color: #888888;
+	border-radius: 25px;
+	}
+	
+	#fifthBlock .dropdown-content
+	{
+	background-color: #888888;
+	color: #000000;
+	}
+	
+	#sixthBlock
+	{
+	padding: 10px;
+	background-color: #aaaaaa;
+	border-radius: 25px;
+	}
+	
+	#sixthBlock .dropdown-content
+	{
+	background-color: #aaaaaa;
+	color: #000000;
+	}
+			
