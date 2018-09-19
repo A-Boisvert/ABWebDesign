@@ -49,7 +49,7 @@
 	background-color: black;
 	height: 10vh;
 	width: 25vw;
-	transition: height 0.5s ease, width 0.5s ease;
+	transition: height 0.25s ease-out, width 0.25s ease-out;
 	}
 	
 	.block:hover

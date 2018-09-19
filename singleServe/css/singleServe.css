@@ -7,24 +7,30 @@ body{
 	margin: 0;
 }
 
-.boardHolder{
-	width: 90%;
-	height: 40vw;
-	margin: 10vh auto;
-	border: 0px solid purple;
-}
-
 div{
 	background-color: #117A65;
 	z-index: 4;
 }
 
+.boardHolder{
+	width: 90vh;
+	height: 90vh;
+	margin: 5vh auto;
+	border: 0px solid green;
+}
+
+.row {
+	height: 10vh;
+	border: 0px dashed white;
+}
+
 .cell {
+	margin-left: -2px;
 	float: left;
-	width: 8vw;
-	height: 8vw;
+	width: 10vh;
+	height: 100%;
 	border: 0px solid red;
-	background-color: #fffc70;
+	background-color: black;
 }
 
 .innerCell{
@@ -32,7 +38,7 @@ div{
 	width: 20%;
 	height: 20%;
 	border: 0px solid #117A65;
-	background-color: #fffc70;
+	background-color: #117A65;
 }
 
 .cellOff{
@@ -40,7 +46,7 @@ div{
 	width: 20%;
 	height: 20%;
 	border: 0px solid #117A65;
-	background-color: black;
+	background-color: #117A65 !important;
 }
 
 .cellOn{
@@ -48,35 +54,104 @@ div{
 	width: 20%;
 	height: 20%;
 	border: 0px solid #117A65;
-	background-color: white;
+	background-color: white !important;
 }
 
-.row {
-	
+.button1 {
+	width: 25px;
+	height: 25px;
+	background-color: white;
+	border-radius: 50%;
+	position: fixed;
+	top:1%;
+	left: 5vh;
+}
+
+.button1 p {
+	width: 50vw;
+	color: white;
+	font-size: 14px;
+	font-family: sans-serif;
+	margin: 0 auto;
+	position:relative;
+	left: 30px;
+	overflow: visible;
+	vertical-align: middle;
+}
+
+.button2 {
+	width: 25px;
+	height: 25px;
+	background-color: white;
+	border-radius: 50%;
+	position: fixed;
+	top:1%;
+	right: 5vh;
+}
+
+.button2 p {
+	float: right;
+	width: 15vw;
+	color: white;
+	font-size: 14px;
+	font-family: sans-serif;
+	margin: 0 auto;
+	right: 20px;
+	position:relative;
+	vertical-align: middle;
 }
 
 .debug {
+	margin: 0;
 	color: white;
 	position: fixed;
-	top: 4%;
-	left: 4%;
+	top: 0%;
+	left: 0%;
 	size: 16px;
 	font-family: sans-serif;
 }
 
+@media only screen and (max-width: 100vh) {
+	
+	.row{
+		height: 7.5%;
+	}
+	
+	.cell{
+		width: 7.5vh;
+	}
+}
+
+@media only screen and (max-width: 50vh) {
+	
+	.row{
+		height: 2%;
+	}
+	
+	.cell{
+		width: 2vh;
+	}
+}
+
+@media only screen and (min-width: 51vh) {
+	
+	.button1{
+		left: 30vh;
+	}
+	
+	.button2{
+		right: 30vh;
+	}
+}
 
 .row:nth-child(even) .cell:nth-child(odd) .innerCell:nth-child(even){
-	background-color: green;
 }
 
 .row:nth-child(odd) .cell:nth-child(odd) .innerCell:nth-child(odd){
-	background-color: green;
 }
 
 .row:nth-child(odd) .cell:nth-child(even) .innerCell:nth-child(even){
-	background-color: green;
 }
 
 .row:nth-child(even) .cell:nth-child(even) .innerCell:nth-child(odd){
-	background-color: green;
 }
