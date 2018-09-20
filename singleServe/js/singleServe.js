@@ -1,12 +1,13 @@
 
 $(document).ready(function(){
 
+	var OnColor;
+	var OffColor;
+
 	ColorSchemeSwap();
-	
 	ShuffleCells();
 
 	$(".boardHolder").mouseenter(function(){
-		
 		$(document).bind("contextmenu",function(e){
 			//return false;
 		});
@@ -22,32 +23,12 @@ $(document).ready(function(){
 		ColorSchemeSwap();
 	});
 	
-	$(".boardHolder").mouseenter(function() {
-		//FirstShuffle();
-	});
-	
 	$(".boardHolder").mouseleave(function() {
 		//ShuffleCells();
 	});
 	
 	$(".innerCell, .cellOn, .cellOff").mouseenter(function(){	
-		if ($(this).hasClass("cellOff"))
-		{
-			//$(this).prop("class", "cellOn");
-			$(this).removeClass("cellOff");
-			$(this).addClass("cellOn");
-		}
-		else if ($(this).hasClass("cellOn"))
-		{
-			//$(this).prop("class", "cellOff");
-			$(this).removeClass("cellOn");
-			$(this).addClass("cellOff");
-		}
-		
-		var onCells = $(".cellOn");
-		var offCells = $(".cellOff");
-		
-		//$(".debug").text("Off: " + offCells.length + " On: " + onCells.length);
+		SwitchCell($(this));
 	});
 	
 	$(".innerCell").click(function(){
@@ -55,28 +36,6 @@ $(document).ready(function(){
 	});
 	
 });
-
-function FirstShuffle() {
-		var cells = $(".innerCell");
-
-		var i;
-		for (i = 0; i < cells.length; ++i) {
-			$(cells[i]).prop("class", "cellOff");
-		}
-		
-		var randNum = Math.floor(Math.random() * 300) + 250  
-		
-		var randomCells = getRandomArrayElements(cells, randNum);
-		
-		var j;
-		for (j = 0; j < randomCells.length; ++j) {
-			$(randomCells[j]).prop("class", "cellOn");
-		}
-		
-		//$(".debug").text("Total cells: " + cells.length + " Randomly Set On: " + randNum);
-		
-		//$('.innerCell').prop("class", "cellOff");
-}
 
 function ShuffleCells() {
 	var cells = $(".innerCell, .cellOn, .cellOff");
@@ -104,6 +63,8 @@ function ShuffleCells() {
 	//$(".debug").text("Total cells: " + cells.length + " Randomly Set On: " + randNum);
 	
 	//$('.innerCell').prop("class", "cellOff");
+	
+	ColorUpdate();
 }
 
 function CheckerBoard () {
@@ -127,43 +88,56 @@ function CheckerBoard () {
 			$(notBibble[i]).removeClass("cellOff cellOn");
 			$(notBibble[i]).addClass("cellOn");
 		}
+		
+	ColorUpdate();
 }
 
-function SwitchCell() {
+function SwitchCell(target) {
 	
 	//$(this).toggleClass("cellOff cellOn");
 	
-	if($(this).hasClass("cellOff"))
+	if (target.hasClass("cellOff"))
 	{
-		$(this).removeClass("cellOff");
-		$(this).addClass("cellOn");
+		//$(this).prop("class", "cellOn");
+		target.removeClass("cellOff");
+		target.addClass("cellOn");
+		//$(this).css("background-color", OnColor);
 	}
-	if($(this).hasClass("cellOn"))
+	else if (target.hasClass("cellOn"))
 	{
-		$(this).removeClass("cellOn");
-		$(this).addClass("cellOff");	
+		//$(this).prop("class", "cellOff");
+		target.removeClass("cellOn");
+		target.addClass("cellOff");
+		//$(this).css("background-color", OffColor);
 	}
-	
+		
 	var onCells = $(".cellOn");
 	var offCells = $(".cellOff");
 	
-	$(".debug").text("Off: " + offCells.length + " On: " + onCells.length);
+	//$(".debug").text("Off: " + offCells.length + " On: " + onCells.length);
+	
+	ColorUpdate();
 }
 
 function ColorSchemeSwap() {
-	var r = Math.floor(156 * Math.random() + 50);
-	var g = Math.floor(100 * Math.random() + 50);
-	var b = Math.floor(156 * Math.random() + 50);
-	var color = 'rgb(' + r + ',' + g + ',' + b + ')';
-	//alert(r +" " + g + " " + b);
-	//alert(color.color);
+	var r1 = Math.floor(128 * Math.random());
+	var g1 = Math.floor(128 * Math.random());
+	var b1 = Math.floor(128 * Math.random());
 	
-	$(".cellOff").prop("background-color", "red");
-	//$("body").css("background-color", color);
-	//$(".boardHolder").css("background-color", color);
-	//$(".innerCell").css("background-color", color);
-	//$(".cellOff").css("background-color", color);
-	//$(".cellOn").css("background-color", "red");
+	var r2 = Math.floor(128 * Math.random() + 128);
+	var g2 = Math.floor(128 * Math.random() + 128);
+	var b2 = Math.floor(128 * Math.random() + 128);
+	
+	OnColor = 'rgb(' + r1 + ',' + g1 + ',' + b1 + ')';
+	OffColor = 'rgb(' + r2 + ',' + g2 + ',' + b2 + ')';
+
+	ColorUpdate();
+}
+
+function ColorUpdate() {
+	$(".button1 p, .button2 p").css("color", OnColor);
+	$(".button1, .button2, .cellOn").css("background-color", OnColor);
+	$("body, .cellOff, .row").css("background-color", OffColor);
 }
 
 function getRandomArrayElements(arr, count) {
