@@ -8,16 +8,18 @@ $(document).ready(function(){
 	$(".boardHolder").mouseenter(function(){
 		
 		$(document).bind("contextmenu",function(e){
-			return false;
+			//return false;
 		});
 	});
 	
 	$(".button1").click(function(){
 		CheckerBoard();
+		ColorSchemeSwap();
 	});
 	
 	$(".button2").click(function(){
 		ShuffleCells();
+		ColorSchemeSwap();
 	});
 	
 	$(".boardHolder").mouseenter(function() {
@@ -81,9 +83,9 @@ function ShuffleCells() {
 	var OnCells = $(".cellOn");
 	
 	var i;
-	for (i = 0; i < OnCells.length; ++i) {
-		$(OnCells[i]).removeClass("cellOn");
-		$(OnCells[i]).addClass("cellOff");
+	for (i = 0; i < cells.length; ++i) {
+		$(cells[i]).removeClass("cellOn");
+		$(cells[i]).addClass("cellOff");
 	}
 	
 	//$(".debug").text("On Cells: " + OnCells.length);
@@ -108,35 +110,38 @@ function CheckerBoard () {
 	var bibble = 
 	$(".row:nth-child(even) .cell:nth-child(odd) .innerCell:nth-child(even), .row:nth-child(odd) .cell:nth-child(odd) .innerCell:nth-child(odd), .row:nth-child(odd) .cell:nth-child(even) .innerCell:nth-child(even), .row:nth-child(even) .cell:nth-child(even) .innerCell:nth-child(odd)")
 	
+	var allCells = $(".innerCell");
+	
 	var notBibble = 
 	$(".row:nth-child(even) .cell:nth-child(odd) .innerCell:nth-child(odd), .row:nth-child(odd) .cell:nth-child(odd) .innerCell:nth-child(even), .row:nth-child(odd) .cell:nth-child(even) .innerCell:nth-child(odd), .row:nth-child(even) .cell:nth-child(even) .innerCell:nth-child(even)")
 	
 	var i;
-	for (i = 0; i < bibble.length; ++i) {
+	for (i = 0; i < allCells.length; ++i) {
 		//$(bibble[i]).prop("class", "cellOff");
-		$(bibble[i]).removeClass("cellOff, cellOn");
-		$(bibble[i]).addClass("cellOff");
+		$(allCells[i]).removeClass("cellOff cellOn");
+		$(allCells[i]).addClass("cellOff");
 		//$(bibble[i]).css("background-color", color);			to do: get this working
 	}
 	for (i = 0; i < notBibble.length; ++i) {
 			//$(notBibble[i]).prop("class", "cellOn");
-			$(notBibble[i]).removeClass("cellOff, cellOn");
+			$(notBibble[i]).removeClass("cellOff cellOn");
 			$(notBibble[i]).addClass("cellOn");
 		}
 }
 
 function SwitchCell() {
-	if ($(this).hasClass("cellOff"))
+	
+	//$(this).toggleClass("cellOff cellOn");
+	
+	if($(this).hasClass("cellOff"))
 	{
-		//$(this).prop("class", "cellOn");
 		$(this).removeClass("cellOff");
 		$(this).addClass("cellOn");
 	}
-	if ($(this).hasClass("cellOn"))
+	if($(this).hasClass("cellOn"))
 	{
-		//$(this).prop("class", "cellOff");
 		$(this).removeClass("cellOn");
-		$(this).addClass("cellOff");
+		$(this).addClass("cellOff");	
 	}
 	
 	var onCells = $(".cellOn");
@@ -153,6 +158,7 @@ function ColorSchemeSwap() {
 	//alert(r +" " + g + " " + b);
 	//alert(color.color);
 	
+	$(".cellOff").prop("background-color", "red");
 	//$("body").css("background-color", color);
 	//$(".boardHolder").css("background-color", color);
 	//$(".innerCell").css("background-color", color);
