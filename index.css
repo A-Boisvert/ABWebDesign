@@ -47,7 +47,7 @@
 	float:top;
 	position: relative;
 	background-color: black;
-	height: 10vh;
+	height: 15vh;
 	width: 25vw;
 	transition: height 0.25s ease-out, width 0.25s ease-out;
 	}
