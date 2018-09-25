@@ -280,4 +280,17 @@
 	background-color: #cccccc;
 	color: #000000;
 	}
+	
+	#eigthBlock
+	{
+	padding: 10px;
+	background-color: #cccccc;
+	border-radius: 25px;
+	}
+	
+	#eigthBlock .dropdown-content
+	{
+	background-color: #cccccc;
+	color: #000000;
+	}
 			
