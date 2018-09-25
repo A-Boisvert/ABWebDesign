@@ -6,6 +6,20 @@ $(document).ready(function(){
 
 	ColorSchemeSwap();
 	ShuffleCells();
+	
+	$(document).on('touchstart', function() {
+    detectTap = true; //detects all touch events
+	});
+	$(document).on('touchmove', function() {
+		detectTap = false; //Excludes the scroll events from touch events
+	});
+	$(document).on('click touchend', function(event) {
+		if (event.type == "click") detectTap = true; //detects click events 
+		   if (detectTap){
+			  //here you can write the function or codes you wanna execute on tap
+
+		   }
+	});
 
 	$(".boardHolder").mouseenter(function(){
 		$(document).bind("contextmenu",function(e){
