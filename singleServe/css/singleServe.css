@@ -68,7 +68,7 @@ div{
 }
 
 .button1 p {
-	width: 50vw;
+	width: 25vw;
 	color: white;
 	font-size: 14px;
 	font-family: sans-serif;
@@ -76,7 +76,6 @@ div{
 	position:relative;
 	left: 30px;
 	overflow: visible;
-	vertical-align: middle;
 }
 
 .button2 {
@@ -90,14 +89,13 @@ div{
 }
 
 .button2 p {
-	width: 15vw;
+	width: 25vw;
 	color: white;
 	font-size: 14px;
 	font-family: sans-serif;
 	margin: 4px auto;
 	left: 30px;
 	position:relative;
-	vertical-align: middle;
 }
 
 .debug {
