@@ -33,8 +33,7 @@
 	
 	body
 	{
-	margin: 10vh, 40vw, 10vh, 40vw;
-	width: 1vw;
+	margin: 0px;
 	background-color: #143363;
 	}
 	
@@ -44,11 +43,13 @@
 	
 	.block
 	{
+	padding: 10px;
+	border-radius: 0px;
 	float:top;
 	position: relative;
 	background-color: black;
 	height: 15vh;
-	width: 25vw;
+	width: 100vw;
 	transition: height 0.25s ease-out, width 0.25s ease-out;
 	}
 	
@@ -56,8 +57,6 @@
 	{
 	background-color: #295499 !important;
 	height: 50vh;
-	width: 95vw;
-	padding: 0vw; !important;
 	display: block;
 	}
 	
@@ -192,8 +191,6 @@
 	
 	#firstBlock
 	{
-	padding: 10px;
-	border-radius: 25px;
 	background-color: #000000;
 	}
 	
@@ -205,92 +202,78 @@
 	
 	#secondBlock
 	{
-	padding:10px;
-	border-radius: 25px;
-	background-color: #222222;
+	background-color: #111111;
 	}
 	
 	#secondBlock .dropdown-content
 	{
-	background-color: #222222;
+	background-color: #111111;
 	color: #666666;
 	}
 	
 	#thirdBlock
 	{
-	padding: 10px;
-	background-color: #444444;
-	border-radius: 25px;
+	background-color: #222222;
 	}
 	
 	#thirdBlock .dropdown-content
 	{
-	background-color: #444444;
+	background-color: #222222;
 	color: #444444;
 	}
 	
 	#fourthBlock
 	{
-	padding: 10px;
-	background-color: #666666;
-	border-radius: 25px;
+	background-color: #333333;
 	}
 	
 	#fourthBlock .dropdown-content
 	{
-	background-color: #666666;
+	background-color: #333333;
 	color: #222222;
 	}
 	
 	#fifthBlock
 	{
-	padding: 10px;
-	background-color: #888888;
-	border-radius: 25px;
+	background-color: #444444;
 	}
 	
 	#fifthBlock .dropdown-content
 	{
-	background-color: #888888;
+	background-color: #444444;
 	color: #000000;
 	}
 	
 	#sixthBlock
 	{
-	padding: 10px;
-	background-color: #aaaaaa;
-	border-radius: 25px;
+	background-color: #555555;
 	}
 	
 	#sixthBlock .dropdown-content
 	{
-	background-color: #aaaaaa;
+	background-color: #555555;
 	color: #000000;
 	}
 	
 	#seventhBlock
 	{
-	padding: 10px;
-	background-color: #cccccc;
-	border-radius: 25px;
+	background-color: #666666;
 	}
 	
 	#seventhBlock .dropdown-content
 	{
-	background-color: #cccccc;
+	background-color: #666666;
 	color: #000000;
 	}
 	
 	#eigthBlock
 	{
-	padding: 10px;
-	background-color: #cccccc;
-	border-radius: 25px;
+	background-color: #777777;
 	}
 	
 	#eigthBlock .dropdown-content
 	{
-	background-color: #cccccc;
+	background-color: #777777;
 	color: #000000;
 	}
 			
