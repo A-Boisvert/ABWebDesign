@@ -85,5 +85,36 @@
 	{
 		
 	}
+	
+	.debugNext
+	{
+		height: 50px;
+		width: 50px;
+		background-color: #777777;
+		position: fixed;
+		left: 10px;
+		bottom: 10px;
+	}
+	
+	.debugNext p
+	{
+		font-size: 20px;
+	}
+	
+	.debugHome
+	{
+		height: 50px;
+		width: 50px;
+		background-color: #777777;
+		position: fixed;
+		right: 10px;
+		bottom: 10px;
+	}
+	
+	.debugHome p
+	{
+		font-size: 20px;
+		text-align: right;
+	}
 
 	
