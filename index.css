@@ -48,7 +48,7 @@
 	float:top;
 	position: relative;
 	background-color: black;
-	height: 15vh;
+	height: 10vh;
 	width: 100vw;
 	transition: height 0.25s ease-out, width 0.25s ease-out;
 	}
@@ -274,6 +274,17 @@
 	#eigthBlock .dropdown-content
 	{
 	background-color: #777777;
+	color: #000000;
+	}
+	
+	#ninthBlock
+	{
+	background-color: #888888;
+	}
+	
+	#ninthBlock .dropdown-content
+	{
+	background-color: #888888;
 	color: #000000;
 	}
 			
