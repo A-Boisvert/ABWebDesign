@@ -1,0 +1,89 @@
+	*
+	{
+	}
+	
+	a
+	{
+	}
+	
+	p
+	{
+	}
+	
+	body
+	{
+		margin: 0;
+		background-color: #aaaaaa;
+	}
+	
+	div
+	{
+	}
+	
+	.boy
+	{
+		height: 40px;
+		width: 40px;
+		background-color: #444444;
+	}
+	
+	.hold4
+	{
+		margin: 10vh auto;
+		height: 80vh;
+		width: 80vh;
+		background-color: #999999;
+	}
+	
+	.topLeft
+	{
+		float: left;
+		height: 45%;
+		width: 45%;
+		background-color: #222222;
+	}
+	
+	.topRight
+	{
+		float: right;
+		height: 45%;
+		width: 45%;
+		background-color: #222222;
+	}
+	
+	.bottomLeft
+	{
+		position: relative;
+		top: 10%;
+		float: left;
+		height: 45%;
+		width: 45%;
+		background-color: #222222;
+	}
+	
+	.bottomRight
+	{
+		position: relative;
+		top: 10%;
+		float: right;
+		height: 45%;
+		width: 45%;
+		background-color: #222222;
+	}
+	
+	.lyrics
+	{
+		font-family: Karla, sans serif;
+		color: white;
+		font-size: 80px;
+		text-align: center;
+		margin: 40% auto;
+		width: 100%;
+	}
+	
+	.lyricLink
+	{
+		
+	}
+
+	
