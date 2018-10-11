@@ -317,13 +317,19 @@
 		background-color: #cccccc;
 	}
 	
+	#lay04 p
+	{
+		color: #cccccc;
+	}
+	
 	#lay04 .Title
 	{
 		
 	}
 	#lay04 .Title p
 	{
-		font-size: 50px;
+		font-size: 90px;
+		font-family: Crimson Text;
 	}
 	
 	#lay04 .Author
@@ -333,6 +339,7 @@
 	#lay04 .Author p
 	{
 		font-size: 20px;
+		font-family: Crimson Text;
 	}
 	
 	#lay04 .ChapterTitle
@@ -342,6 +349,7 @@
 	#lay04 .ChapterTitle p
 	{
 		font-size: 35px;
+		font-family: Crimson Text;
 	}
 	
 	#lay04 .FirstParagraph
@@ -351,6 +359,7 @@
 	#lay04 .FirstParagraph p
 	{
 		font-size: 16px;
+		font-family: Crimson Text;
 	}
 	
 	#lay04 p
@@ -361,7 +370,7 @@
 	#lay04 .Holder
 	{
 		padding: 10%;
-		margin: 20%;
+		margin: 0%;
 		background-color: #555555;
 		min-height: 20px;
 		min-width: 20px;
