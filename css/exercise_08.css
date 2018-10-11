@@ -256,12 +256,13 @@
 	}
 	#lay03 .Title p
 	{
-		font-size: 50px;
+		font-size: 75px;
+		text-transform: uppercase;
 	}
 	
 	#lay03 .Author
 	{
-		
+		margin-top: -50px;
 	}
 	#lay03 .Author p
 	{
@@ -275,6 +276,14 @@
 	#lay03 .ChapterTitle p
 	{
 		font-size: 35px;
+		text-transform: uppercase;
+	}
+	
+	#lay03 .LineBreak
+	{
+		width: 100%;
+		height: 10px;
+		text-decoration-line: underline;
 	}
 	
 	#lay03 .FirstParagraph
@@ -294,7 +303,7 @@
 	#lay03 .Holder
 	{
 		padding: 10%;
-		margin: 20%;
+		margin: 10%;
 		background-color: #555555;
 		min-height: 20px;
 		min-width: 20px;
