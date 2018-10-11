@@ -303,8 +303,7 @@
 	#lay03 .Holder
 	{
 		padding: 10%;
-		margin: 10%;
-		background-color: #555555;
+		margin-right: 10%;
 		min-height: 20px;
 		min-width: 20px;
 	}
