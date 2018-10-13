@@ -60,12 +60,11 @@
 		float: left;
 		margin: 2vh;
 		background-color: #bbbbbb;
+		position: in-line;
 	}
 	
 	#lay00 .square:hover
 	{
-		width: 6vw;
-		height: 6vw;
 		float: left;
 		margin: 2vh;
 		background-color: #666666;
@@ -707,6 +706,7 @@
 	
 	#lay08 .ChapterTitle
 	{
+		text-align: center;
 		width: 100%;
 		background-color: /blue;
 	}
@@ -727,7 +727,7 @@
 	{
 		padding: 2vh;
 		font-family: 'Noto Sans KR', sans-serif;
-		font-size: 16px;
+		font-size: 20px;
 		color: white;
 	}
 	
@@ -736,8 +736,8 @@
 		position: fixed;
 		top: 5%;
 		left: 20%;
-		padding: 1%;
-		margin: 10% 5%;
+		padding: 0 1%;
+		margin: 0% 5%;
 		min-height: 10%;
 		width: 40%;
 		background-color: /green;
@@ -747,8 +747,13 @@
 	#lay09
 	{
 		margin: 0;
-		background-color: #178761;
+		background-color: #385a75;
 		height: 80vh;
+	}
+	
+	#lay09 *
+	{
+	box-sizing: border-box;
 	}
 		
 	#lay09 p
@@ -760,149 +765,193 @@
 	#lay09 .TitleBar
 	{
 		width: 100%;
-		height: 100px;
-		top: -5vh;
-		position: fixed;
+		min-height: 100px;
+		position: relative;
 		padding: 0;
+		top:10%;
+		background-color: /green;
 	}
 	#lay09 .TitleBar p
 	{
-		font-family: 'Kodchasan', sans-serif;
-		font-size: 20vw;
-		color: white;
-		padding: 0 0%;
+		font-family: 'Halant', serif;
+		font-size: 150px;
+		color: #ccf55c;
+		padding: 5% 5%;
 		margin: 0;
-		top:0;
+		line-height: 50px;
+	}
+	#lay09 .TitleBar .SubTitle
+	{
+		top: -50px;
+		font-family: 'Halant', serif;
+		font-size: 60px;
+		color: #ccf55c;
+		padding: 5% 5%;
+		margin: 0;
+
 	}
 	
 	#lay09 .Author
 	{
-		position: fixed;
-		right: 1%;
-		top: 1%;
+		position: relative;
+		top: 5%;
+		background-color: /purple;
 	}
 	#lay09 .Author p
 	{
-		font-family: 'Kodchasan', sans-serif;
-		font-size: 40px;
-		color: white;
+		font-family: 'Halant', serif;
+		position: relative;
+		top: -5px;
+		font-size: 30px;
+		color: #ccf55c;
+		line-height: 60px;
+		padding: 0 5%;
 	}
 	
 	#lay09 .ChapterTitle
 	{
 		min-width: 25px;
+		margin: 3% 0;
 		float: left;
+		background-color: /black;
+		border: 5px solid /#ccf55c;
 	}
 	#lay09 .ChapterTitle p
 	{
 		padding: 2vh;
-		font-family: 'Raleway', sans-serif;
-		font-size: 35px;
-		color: white;
+		font-family: 'Goudy Bookletter 1911', serif;
+		font-size: 26px;
+		color: #ccf55c;
 	}
 	
 	#lay09 .FirstParagraph
 	{
+		margin: 3% 0;
 		float: left;
 		width: 70%;
+		background-color: /yellow;
+		border: 5px solid /#ccf55c;
 	}
 	#lay09 .FirstParagraph p
 	{
 		padding: 2vh;
-		font-family: 'Bai Jamjuree', sans-serif;
-		font-size: 16px;
-		color: white;
+		font-family: 'Goudy Bookletter 1911', serif;
+		font-size: 26px;
+		color: #ccf55c;
 	}
 	
 	#lay09 .Holder
 	{
 		position: fixed;
-		top: 20%;
+		top: 0;
+		left: 25%;
 		padding: 1%;
-		margin: 10% 5%;
-		min-height: 10%;
-		width: 90%;
+		margin: 0;
+		height: 100%;
+		width: 70%;
+		background-color: /red;
+		border: 5px solid /red;
+	}
+	
+	#lay09 .SideHolder
+	{
+		position: fixed;
+		top: 0%;
+		padding: 1%;
+		margin: 0;
+		height: 100%;
+		width: 20%;
+		background-color: blue;
 	}
 
 	/*////////////////////////////////*/
 	#lay10
 	{
 		margin: 0;
-		background-color: #178761;
+		background-color: #c373c7;
 		height: 80vh;
 	}
 		
 	#lay10 p
 	{
 		font-family: sans-serif;
-		color: #cccccc;
+		color: #565656;;
 	}
 	
-	#lay10 .TitleBar
+	#lay10 .AuthorHolder
 	{
-		width: 100%;
-		height: 100px;
-		top: -5vh;
-		position: fixed;
-		padding: 0;
-	}
-	#lay10 .TitleBar p
-	{
-		font-family: 'Kodchasan', sans-serif;
-		font-size: 20vw;
-		color: white;
-		padding: 0 0%;
-		margin: 0;
-		top:0;
-	}
-	
-	#lay10 .Author
-	{
-		position: fixed;
-		right: 1%;
-		top: 1%;
-	}
-	#lay10 .Author p
-	{
-		font-family: 'Kodchasan', sans-serif;
-		font-size: 40px;
-		color: white;
-	}
-	
-	#lay10 .ChapterTitle
-	{
-		min-width: 25px;
-		float: left;
-	}
-	#lay10 .ChapterTitle p
-	{
-		padding: 2vh;
-		font-family: 'Raleway', sans-serif;
-		font-size: 35px;
-		color: white;
-	}
-	
-	#lay10 .FirstParagraph
-	{
-		float: left;
 		width: 70%;
+		height: 100%;
+		position: fixed;
+		margin: 0 15%;
+		background-color: #b091de;
 	}
-	#lay10 .FirstParagraph p
+	#lay10 .AuthorHolder p
 	{
-		padding: 2vh;
-		font-family: 'Bai Jamjuree', sans-serif;
-		font-size: 16px;
-		color: white;
+		padding: 1vh;
+		font-family: 'Rubik Mono One', sans-serif;
+		font-size: 70px;
+		color: /#565656;
+		position: relative;
+		margin: 0;
+		top: 3vh;
+		background-color: /red;
 	}
 	
-	#lay10 .Holder
+	#lay10 .TitleHolder
 	{
-		position: fixed;
-		top: 20%;
-		padding: 1%;
-		margin: 10% 5%;
-		min-height: 10%;
+		position: relative;
+		left: 5vh;
+		top: 3vh;
 		width: 90%;
+		height: 90%;
+		background-color: #bfde91;
+	}
+	#lay10 .TitleHolder p
+	{
+		padding: 1vh;
+		font-family: 'Rubik Mono One', sans-serif;
+		font-size: 40px;
+		color: /#565656;
+		top:0;
+		background-color: /green;
+	}
+	
+	#lay10 .ChapterHolder
+	{
+		position: relative;
+		left: 5vh;
+		top: 1vh;
+		width: 90%;
+		height: 90%;
+		background-color: #dec791;
+	}
+	#lay10 .ChapterHolder p
+	{
+		padding: 1vh;
+		font-family: 'Rubik Mono One', sans-serif;
+		font-size: 35px;
+		color: /#565656;
+		top:0;
+		background-color: /blue;
+	}
+	
+	#lay10 .FirstParagraphHolder
+	{
+		position: relative;
+		left: 5vh;
+		top: 1vh;
+		width: 90%;
+		height: 90%;
+		background-color: #de91bf;
+	}
+	#lay10 .FirstParagraphHolder p
+	{
+		padding: 1vh;
+		font-family: 'Titillium Web', sans-serif;
+		font-size: 36px;
+		color: #2b2b2b;
+		top:0;
 	}
 	
 	
