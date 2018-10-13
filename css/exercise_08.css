@@ -533,46 +533,379 @@
 	
 	#lay06 .ChapterTitle
 	{
-		
+		min-width: 25px;
+		float: left;
 	}
 	#lay06 .ChapterTitle p
 	{
+		padding: 2vh;
 		font-family: 'Raleway', sans-serif;
 		font-size: 35px;
-		color: black;
+		color: white;
 	}
 	
 	#lay06 .FirstParagraph
 	{
-		width: 200px;
+		float: left;
+		width: 70%;
 	}
 	#lay06 .FirstParagraph p
 	{
+		padding: 2vh;
 		font-family: 'Bai Jamjuree', sans-serif;
 		font-size: 16px;
-		color: black;
+		color: white;
 	}
 	
 	#lay06 .Holder
 	{
-		padding: 1% 5%;
+		position: fixed;
+		top: 20%;
+		padding: 1%;
 		margin: 10% 5%;
-		background-color: #red;
-		min-height: 20px;
-		width: 200px;
+		min-height: 10%;
+		width: 90%;
 	}
 	
 	
 	/*////////////////////////////////*/
 	#lay07
 	{
-		
+		margin: 0;
+		background-color: #2b2b2b;
+		height: 80vh;
 	}
-	
+		
 	#lay07 p
 	{
-		font-size: 25px;
+		font-family: sans-serif;
+		color: #cccccc;
 	}
 	
+	#lay07 .TitleBar
+	{
+		margin: 0;
+		padding: 0;
+		width: 100%;
+		height: 100px;
+		top: 3vh;
+		position: fixed;
+		padding: 0;
+	}
+	#lay07 .TitleBar p
+	{
+		font-family: 'Tangerine', cursive;
+		font-size: 21vw;
+		color: #928dfb;
+		padding: 0 0%;
+		margin: 0;
+		top: 50px;
+		line-height: 70%;
+		letter-spacing: -6px;
+	}
+	
+	#lay07 .Author
+	{
+		padding: 0;
+		
+		position: absolute;
+		right: 3%;
+		top: 1%;
+	}
+	#lay07 .Author p
+	{
+		font-family: 'Nothing You Could Do', cursive;
+		font-size: 40px;
+		color: #928dfb;
+	}
+	
+	#lay07 .ChapterTitle
+	{
+		min-width: 25px;
+		float: left;
+	}
+	#lay07 .ChapterTitle p
+	{
+		padding: 2vh;
+		font-family: 'Nothing You Could Do', cursive;
+		font-size: 35px;
+		color: #928dfb;
+	}
+	
+	#lay07 .FirstParagraph
+	{
+		float: left;
+		width: 70%;
+	}
+	#lay07 .FirstParagraph p
+	{
+		padding: 2vh;
+		font-family: 'Nothing You Could Do', cursive;
+		font-size: 36px;
+		color: #928dfb;
+	}
+	
+	#lay07 .Holder
+	{
+		position: fixed;
+		top: 20%;
+		padding: 1%;
+		margin: 10% 5%;
+		min-height: 10%;
+		width: 90%;
+		background-color: #2b2b2b;
+		border: 5px solid #928dfb;
+	}
+	
+	/*////////////////////////////////*/
+	#lay08
+	{
+		margin: 0;
+		background-color: #8a0c0c;
+		height: 90vh;
+	}
+		
+	#lay08 p
+	{
+		font-family: sans-serif;
+		color: #cccccc;
+	}
+	
+	#lay08 .TitleBar
+	{
+		min-width: 20px;
+		height: 100px;
+		bottom: 0;
+		right: 0;
+		position: fixed;
+		padding: 0;
+	}
+	#lay08 .TitleBar p
+	{
+		font-family: 'Anton', sans-serif;
+		font-size: 72px;
+		color: white;
+		padding: 0 0%;
+		margin: 0;
+	}
+	
+	#lay08 .Author
+	{
+		min-width: 20px;
+		height: 100px;
+		bottom: 100px;
+		right: 0;
+		position: fixed;
+		padding: 0;
+	}
+	#lay08 .Author p
+	{
+		font-family: 'Anton', sans-serif;
+		font-size: 48px;
+		color: white;
+	}
+	
+	#lay08 .ChapterTitle
+	{
+		width: 100%;
+		background-color: /blue;
+	}
+	#lay08 .ChapterTitle p
+	{
+		padding: 2vh;
+		font-family: 'Noto Sans KR', sans-serif;
+		font-size: 35px;
+		color: white;
+	}
+	
+	#lay08 .FirstParagraph
+	{
+		width: 100%;
+		background-color: /red;
+	}
+	#lay08 .FirstParagraph p
+	{
+		padding: 2vh;
+		font-family: 'Noto Sans KR', sans-serif;
+		font-size: 16px;
+		color: white;
+	}
+	
+	#lay08 .Holder
+	{
+		position: fixed;
+		top: 5%;
+		left: 20%;
+		padding: 1%;
+		margin: 10% 5%;
+		min-height: 10%;
+		width: 40%;
+		background-color: /green;
+	}
+	
+	/*////////////////////////////////*/
+	#lay09
+	{
+		margin: 0;
+		background-color: #178761;
+		height: 80vh;
+	}
+		
+	#lay09 p
+	{
+		font-family: sans-serif;
+		color: #cccccc;
+	}
+	
+	#lay09 .TitleBar
+	{
+		width: 100%;
+		height: 100px;
+		top: -5vh;
+		position: fixed;
+		padding: 0;
+	}
+	#lay09 .TitleBar p
+	{
+		font-family: 'Kodchasan', sans-serif;
+		font-size: 20vw;
+		color: white;
+		padding: 0 0%;
+		margin: 0;
+		top:0;
+	}
+	
+	#lay09 .Author
+	{
+		position: fixed;
+		right: 1%;
+		top: 1%;
+	}
+	#lay09 .Author p
+	{
+		font-family: 'Kodchasan', sans-serif;
+		font-size: 40px;
+		color: white;
+	}
+	
+	#lay09 .ChapterTitle
+	{
+		min-width: 25px;
+		float: left;
+	}
+	#lay09 .ChapterTitle p
+	{
+		padding: 2vh;
+		font-family: 'Raleway', sans-serif;
+		font-size: 35px;
+		color: white;
+	}
+	
+	#lay09 .FirstParagraph
+	{
+		float: left;
+		width: 70%;
+	}
+	#lay09 .FirstParagraph p
+	{
+		padding: 2vh;
+		font-family: 'Bai Jamjuree', sans-serif;
+		font-size: 16px;
+		color: white;
+	}
+	
+	#lay09 .Holder
+	{
+		position: fixed;
+		top: 20%;
+		padding: 1%;
+		margin: 10% 5%;
+		min-height: 10%;
+		width: 90%;
+	}
+
+	/*////////////////////////////////*/
+	#lay10
+	{
+		margin: 0;
+		background-color: #178761;
+		height: 80vh;
+	}
+		
+	#lay10 p
+	{
+		font-family: sans-serif;
+		color: #cccccc;
+	}
+	
+	#lay10 .TitleBar
+	{
+		width: 100%;
+		height: 100px;
+		top: -5vh;
+		position: fixed;
+		padding: 0;
+	}
+	#lay10 .TitleBar p
+	{
+		font-family: 'Kodchasan', sans-serif;
+		font-size: 20vw;
+		color: white;
+		padding: 0 0%;
+		margin: 0;
+		top:0;
+	}
+	
+	#lay10 .Author
+	{
+		position: fixed;
+		right: 1%;
+		top: 1%;
+	}
+	#lay10 .Author p
+	{
+		font-family: 'Kodchasan', sans-serif;
+		font-size: 40px;
+		color: white;
+	}
+	
+	#lay10 .ChapterTitle
+	{
+		min-width: 25px;
+		float: left;
+	}
+	#lay10 .ChapterTitle p
+	{
+		padding: 2vh;
+		font-family: 'Raleway', sans-serif;
+		font-size: 35px;
+		color: white;
+	}
+	
+	#lay10 .FirstParagraph
+	{
+		float: left;
+		width: 70%;
+	}
+	#lay10 .FirstParagraph p
+	{
+		padding: 2vh;
+		font-family: 'Bai Jamjuree', sans-serif;
+		font-size: 16px;
+		color: white;
+	}
+	
+	#lay10 .Holder
+	{
+		position: fixed;
+		top: 20%;
+		padding: 1%;
+		margin: 10% 5%;
+		min-height: 10%;
+		width: 90%;
+	}
+	
+	
+	/*////////////////////////////////*/
 	
 	
