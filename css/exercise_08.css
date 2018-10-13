@@ -188,7 +188,7 @@
 	#lay02
 	{
 		margin: 0;
-		background-color: #cccccc;
+		background-color: black;
 	}
 		
 	#lay02 p
@@ -204,6 +204,7 @@
 	#lay02 .Title p
 	{
 		font-size: 50px;
+		color: #ff5510;
 	}
 	
 	#lay02 .Author
@@ -213,6 +214,7 @@
 	#lay02 .Author p
 	{
 		font-size: 20px;
+		color: #ff5510;
 	}
 	
 	#lay02 .ChapterTitle
@@ -222,22 +224,42 @@
 	#lay02 .ChapterTitle p
 	{
 		font-size: 35px;
+		color: #ff5510;
 	}
 	
 	#lay02 .FirstParagraph
 	{
-		
+		width: 20vw;
 	}
 	#lay02 .FirstParagraph p
 	{
 		font-size: 16px;
+		color: #ff5510;
 	}
 	
 	#lay02 .Holder
 	{
-		padding: 10%;
-		margin: 20%;
-		background-color: #555555;
+		padding: 1% 5%;
+		margin: 0 20%;
+		background-color: black;
+		min-height: 20px;
+		min-width: 20px;
+	}
+	
+	#lay02 .Holder2
+	{
+		padding: 1% 5%;
+		margin: 5% 20%;
+		background-color: black;
+		min-height: 20px;
+		min-width: 20px;
+	}
+	
+	#lay02 .Holder3
+	{
+		padding: 1% 5%;
+		margin: 5% 20%;
+		background-color: black;
 		min-height: 20px;
 		min-width: 20px;
 	}
@@ -252,7 +274,8 @@
 	
 	#lay03 .Title
 	{
-		
+		position: relative;
+		top: 10%;
 	}
 	#lay03 .Title p
 	{
@@ -262,7 +285,7 @@
 	
 	#lay03 .Author
 	{
-		margin-top: -50px;
+		position: relative;
 	}
 	#lay03 .Author p
 	{
@@ -288,7 +311,7 @@
 	
 	#lay03 .FirstParagraph
 	{
-		
+		width: 500px;
 	}
 	#lay03 .FirstParagraph p
 	{
@@ -303,7 +326,7 @@
 	#lay03 .Holder
 	{
 		padding: 10%;
-		margin-right: 10%;
+		margin: 0 10% 10% 0;
 		min-height: 20px;
 		min-width: 20px;
 	}
@@ -313,37 +336,48 @@
 	#lay04
 	{
 		margin: 0;
-		background-color: #cccccc;
+		background-color: #555555;
 	}
 	
 	#lay04 p
 	{
-		color: #cccccc;
+		color: #222222;
 	}
 	
 	#lay04 .Title
 	{
-		
+		top: 20%;
+		position: relative;
+		background-color: #444444;
+		min-height: 5px;
 	}
 	#lay04 .Title p
 	{
+		padding: 0 5%;
 		font-size: 90px;
 		font-family: Crimson Text;
 	}
 	
 	#lay04 .Author
 	{
+		top: 0;
+		left: 0%;
+		position: relative;
+		background-color: #333333;
 		
 	}
 	#lay04 .Author p
 	{
+		padding: 0 5%;
 		font-size: 20px;
 		font-family: Crimson Text;
+		color: #666666;
+		min-width: 20px;
 	}
 	
 	#lay04 .ChapterTitle
 	{
-		
+		position: relative;
 	}
 	#lay04 .ChapterTitle p
 	{
@@ -353,11 +387,12 @@
 	
 	#lay04 .FirstParagraph
 	{
-		
+		width: 50%;
 	}
 	#lay04 .FirstParagraph p
 	{
-		font-size: 16px;
+		
+		font-size: 24px;
 		font-family: Crimson Text;
 	}
 	
@@ -368,9 +403,9 @@
 	
 	#lay04 .Holder
 	{
-		padding: 10%;
+		padding: 5%;
 		margin: 0%;
-		background-color: #555555;
+		background-color: #666666;
 		min-height: 20px;
 		min-width: 20px;
 	}
@@ -379,24 +414,152 @@
 	/*////////////////////////////////*/
 	#lay05
 	{
-		
+		margin: 0;
+		background-color: #cccccc;
+		height: 80vh;
 	}
-	
+		
 	#lay05 p
 	{
-		font-size: 25px;
+		font-family: sans-serif;
+		color: #cccccc;
 	}
 	
+	#lay05 .TitleBar
+	{
+		width: 100%;
+		background-color: #fbfeb2;
+		height: 100px;
+		top: 3vh;
+		position: fixed;
+		padding: 0;
+	}
+	#lay05 .TitleBar p
+	{
+		font-family: 'Courgette', cursive;
+		font-size: 50px;
+		color: black;
+		padding: 0 10%;
+		margin: 0;
+		top:0;
+	}
+	
+	#lay05 .Author
+	{
+		
+	}
+	#lay05 .Author p
+	{
+		font-family: 'Courgette', cursive;
+		font-size: 20px;
+		color: black;
+	}
+	
+	#lay05 .ChapterTitle
+	{
+		
+	}
+	#lay05 .ChapterTitle p
+	{
+		font-family: 'Special Elite', cursive;
+		font-size: 35px;
+		color: black;
+	}
+	
+	#lay05 .FirstParagraph
+	{
+		width: 200px;
+	}
+	#lay05 .FirstParagraph p
+	{
+		font-family: 'Ubuntu Mono', monospace;
+		font-size: 16px;
+		color: black;
+	}
+	
+	#lay05 .Holder
+	{
+		padding: 1% 5%;
+		margin: 10% 5%;
+		background-color: #fbfeb2;
+		min-height: 20px;
+		width: 200px;
+	}
 	
 	/*////////////////////////////////*/
 	#lay06
 	{
-		
+		margin: 0;
+		background-color: #178761;
+		height: 80vh;
 	}
-	
+		
 	#lay06 p
 	{
-		font-size: 25px;
+		font-family: sans-serif;
+		color: #cccccc;
+	}
+	
+	#lay06 .TitleBar
+	{
+		width: 100%;
+		height: 100px;
+		top: -5vh;
+		position: fixed;
+		padding: 0;
+	}
+	#lay06 .TitleBar p
+	{
+		font-family: 'Kodchasan', sans-serif;
+		font-size: 20vw;
+		color: white;
+		padding: 0 0%;
+		margin: 0;
+		top:0;
+	}
+	
+	#lay06 .Author
+	{
+		position: fixed;
+		right: 1%;
+		top: 1%;
+	}
+	#lay06 .Author p
+	{
+		font-family: 'Kodchasan', sans-serif;
+		font-size: 40px;
+		color: white;
+	}
+	
+	#lay06 .ChapterTitle
+	{
+		
+	}
+	#lay06 .ChapterTitle p
+	{
+		font-family: 'Raleway', sans-serif;
+		font-size: 35px;
+		color: black;
+	}
+	
+	#lay06 .FirstParagraph
+	{
+		width: 200px;
+	}
+	#lay06 .FirstParagraph p
+	{
+		font-family: 'Bai Jamjuree', sans-serif;
+		font-size: 16px;
+		color: black;
+	}
+	
+	#lay06 .Holder
+	{
+		padding: 1% 5%;
+		margin: 10% 5%;
+		background-color: #red;
+		min-height: 20px;
+		width: 200px;
 	}
 	
 	
