@@ -60,21 +60,20 @@
 	
 	.introContainer
 	{
-		background-color: /#555555;
-		padding: 0 2vh;
+	padding: 0 20vw;
+	background-color: #dddddd;
 	}
 	.introText
 	{
-		font-family: 'Vollkorn', sans-serif;
-		color: #222222;
-		font-size: 1.2em;
+	padding: 2vh;
+	background-color: #FDFF92;
+	font-size: 1.2em;
 	}
 	
 	.subtitleContainer
 	{
 		padding: 2vw;
 		background-color: #222222;
-		font-size: 25px;
 		width: 95vw;
 	}
 	.subtitleText
@@ -84,6 +83,7 @@
 		margin: 0 auto;
 		color: #FDFF92; 
 		text-align: center;
+		font-size: 50px;
 	}
 	
 	ul
@@ -94,12 +94,6 @@
 	.contrast
 	{
 		color: #8E5741;
-	}
-	
-	.divider
-	{
-		padding: 4vw;
-		background-color: #FFB292;
 	}
 	
 	#body01Container
@@ -114,23 +108,54 @@
 		font-size: 1.2em;
 	}
 
-	
 @media screen and (max-width: 600px)
 {
+	.titleContainer
+	{
+		padding: 2px 2px;
+		min-height: 10vh;
+	}
+	.titleText
+	{
+		font-size: 6vw;
+	}
 	
+	.authorText
+	{
+		font-size: 4vw;
+	}
+	
+	.introContainer
+	{
+		background-color: /#555555;
+		padding: 0 0;
+	}
+	.introText
+	{
+		font-family: 'Vollkorn', sans-serif;
+		color: #222222;
+		font-size: 0.9em;
+	}
+	
+	.quoteContainer
+	{
+		background-color: #dddddd;
+		padding: 2vh;
+		margin: 0;
+	}
+	.quoteText
+	{
+		font-size: 0.7em;
+		text-align: center;
+	}
+	
+	.subtitleText
+	{
+		font-size: 25px;
+	}
 }
 	
 @media screen and (min-width: 600px)
 {
-	.introContainer
-	{
-	padding: 0 20vw;
-	background-color: #dddddd;
-	}
-	.introText
-	{
-	padding: 2vh;
-	background-color: #FDFF92;
-	font-size: 1em;
-	}
+	
 }
