@@ -63,6 +63,17 @@
 	color: red;
 	}
 	
+	.emptyBlock
+	{
+	padding: 10px;
+	border-radius: 0px;
+	float:top;
+	position: relative;
+	background-color: black;
+	height: 10vh;
+	width: 100vw;
+	}
+	
 	.dropdown
 	{
 	height: 70%;

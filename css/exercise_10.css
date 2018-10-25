@@ -1,0 +1,131 @@
+	body
+	{
+		background-color: #222222;
+		font-size: 24px;
+		margin: 0;
+	}
+	
+	.container 
+	{
+		font-family: 'Vollkorn', serif;
+		background-color: #FDFF92;
+	}
+	
+	.titleContainer
+	{
+		margin: 0;
+		padding: 5px 5px;
+		background-color: /#FFB292;
+		background-color: #222222;
+		min-height: 10px;
+		min-width: 10px;
+	}
+	.titleText
+	{
+		font-family: 'Montserrat', sans-serif;
+		color: #FDFF92;
+		font-size: 3.9vw;
+		text-align: center;
+	}
+	
+	.authorContainer
+	{
+		margin: 0;
+		padding: 5px 5px;
+		background-color: /#FFB292;
+		background-color: #222222;
+		min-height: 10px;
+		min-width: 10px;
+	}
+	.authorText
+	{
+		font-family: 'Montserrat', sans-serif;
+		color: #FDFF92;
+		font-size: 2vw;
+		text-align: center;
+		width: 100%;
+	}
+	
+	.quoteContainer
+	{
+		background-color: #dddddd;
+		padding: 2vh;
+		margin: 0;
+	}
+	.quoteText
+	{
+		font-size: 1em;
+		text-align: center;
+	}
+	
+	.introContainer
+	{
+		background-color: /#555555;
+		padding: 0 2vh;
+	}
+	.introText
+	{
+		font-family: 'Vollkorn', sans-serif;
+		color: #222222;
+		font-size: 1.2em;
+	}
+	
+	.subtitleContainer
+	{
+		padding: 2vw;
+		background-color: #222222;
+		font-size: 25px;
+		width: 95vw;
+	}
+	.subtitleText
+	{
+		background-color: /green;
+		width: 100%;
+		margin: 0 auto;
+		color: #FDFF92; 
+		text-align: center;
+	}
+		
+	.contrast
+	{
+		color: #8E5741;
+	}
+	
+	.divider
+	{
+		padding: 4vw;
+		background-color: #FFB292;
+	}
+	
+	#body01Container
+	{
+		background-color: /#555555;
+		padding: 0 0 0 8vh;
+	}
+	#body01Text
+	{
+		font-family: 'Vollkorn', sans-serif;
+		color: #222222;
+		font-size: 1.2em;
+	}
+
+	
+@media screen and (max-width: 600px)
+{
+	
+}
+	
+@media screen and (min-width: 600px)
+{
+	.introContainer
+	{
+	padding: 0 20vw;
+	background-color: #dddddd;
+	}
+	.introText
+	{
+	padding: 2vh;
+	background-color: #FDFF92;
+	font-size: 1em;
+	}
+}
