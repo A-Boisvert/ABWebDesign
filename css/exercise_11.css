@@ -130,15 +130,27 @@
 		transform: rotateZ(120deg);
 		border: solid 0px blue;
 	}
-	
 
-
-@media screen and (max-width: 600px)
+<!-- Big Desktop -->
+@media screen and (max-width: 1440px)	
 {
 	
 }
 	
-@media screen and (min-width: 600px)
+<!-- Desktop -->
+@media screen and (max-width: 1024px)	
+{
+	
+}	
+
+<!-- Tablet -->
+@media screen and (max-width: 768px)	
+{
+	
+}
+	
+<!-- Mobile -->
+@media screen and (min-width: 320px)
 {
 	
 }
