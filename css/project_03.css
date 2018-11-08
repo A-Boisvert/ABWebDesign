@@ -8,6 +8,8 @@
 		margin: 0;
 		background-color: #0e132f;
 		font-size: 12pt;
+		--post001Color: #5a8bd6;
+		--bgDarkBlue: #0e132f;
 	}
 	
 	html
@@ -32,10 +34,10 @@
 		display: none;
 	}
 	
-	/* Top Navigation Bar //////////////// */
+	/* Top Navigation Bar ///////////////////////////////////////////// */
 	.navBar
 	{
-		background-color: #0e132f;
+		background-color: var(--bgDarkBlue);
 		position: fixed;
 		width: 100vw;
 		height: 10vh;
@@ -45,15 +47,16 @@
 	}
 	.hamburger:hover + .navBar
 	{
-		height: 90vh;
+		height: /90vh;
 	}
 	.hamburger:hover + .navBar .navBarStem
 	{
-		top: 5%;
+		top: /5%;
 	}
 	.hamburger:hover ~ .container
 	{
-		top: 90vh;
+		top: /90vh;
+		overflow: /hidden;
 	}
 	
 	.hamburger
@@ -67,7 +70,7 @@
 		z-index: 4;
 	}
 	
-	.dot
+	.dotTop
 	{
 		width: 5vh;
 		height: 5vh;
@@ -90,7 +93,7 @@
 	}
 	
 	
-	/* Body //////////////// */
+	/* Body ////////////////////////////////////////////////////// */
 	.container
 	{
 		position: relative;
@@ -107,7 +110,7 @@
 		margin: 0 auto;
 		background-color: /red;
 		width: 50vw;
-		height: 70vh;
+		height: 70vh;		/* can push Gaps down */
 		overflow: visible;
 		border: solid 2px /white;
 	}
@@ -123,6 +126,7 @@
 		position: relative;
 		float: right;
 		right: -66vw;		/* negative of (((postSpread width - 1) - containerSpread width) / 2) + 1 */
+		transition: all .5s ease-out;
 	}
 	.postSpreadGap
 	{
@@ -171,13 +175,14 @@
 		width: 100%;
 		height: 100%;
 		background-color: #282f54;
+		background-color: /purple;
 		padding: 2%;
 		border: solid 2px blue;
 	}
 	.postTitle
 	{
 		width: 100%;
-		height: 3em;
+		min-height: 50px;
 		border: dashed 1px #444444;
 		font-family: 'PT Sans Narrow', sans-serif;
 		font-size: 3em;
@@ -190,14 +195,17 @@
 	.postBody
 	{
 		margin: 0 auto;
+		padding: 5px;
 		width: 60%;
 		min-height: 5vh;
 		border: dashed 1px #555555;
 		font-family: 'PT Sans Narrow', sans-serif;
-		font-size: 1.5em;
+		font-size: 1.3em;
 		color: white;
 	}
 	
+	
+	/* Posts ////////////////////////////////////////////////////// */
 	#emptyPost
 	{
 		border: solid 0 red;
@@ -216,6 +224,7 @@
 	{
 		position: relative;
 		top: -55px;
+		font-size: 3em;
 	}
 	#post001 .postColumnGapStem
 	{
@@ -237,7 +246,23 @@
 	{
 		color: #289786;
 	}
-	
+
+	.dot
+	{
+		width: 5vh;
+		height: 5vh;
+		background-color: #a7c3ed;
+		position: absolute;
+		border-radius: 50%;
+		bottom: -7vh;
+		left: calc(50% - 2.5vh);
+	}
+	.right
+	{
+	}
+	.left
+	{
+	}
 	
 
 /* Big Desktop */
