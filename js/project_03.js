@@ -1,24 +1,25 @@
+// gotten from https://stackoverflow.com/questions/22678482/disable-horizontal-scroll-but-allow-vertical-scroll/29431155
+$(function() {
+
+    var $body = $(document);
+    $body.bind('scroll', function() {
+        // "Disable" the horizontal scroll.
+        if ($body.scrollLeft() !== 0) {
+            $body.scrollLeft(0);
+        }
+    });
+
+}); 
+
 $(document).ready(function(){
 
-	var OnColor;
-
-	//ColorSchemeSwap();
-	//ShuffleCells();
-	
 	$(window).resize(function() {
-		$('.postSpread').css('transition', 'all 0s linear');
+		$('.postSpread, .postSpreadGap').css('transition', 'all 0s linear');
 		
 		waitForFinalEvent(function(){
 			//alert('Resize...');
-			$('.postSpread').css('transition', 'all .5s ease-out');
+			$('.postSpread, .postSpreadGap').css('transition', 'all .5s ease-out');
 		}, 500, "some unique string");
-	});
-
-	
-	$(".hambu").mouseenter(function(){
-		$(document).bind("contextmenu",function(e){
-			//return false;
-		});
 	});
 	
 	$(".hamburger").click(function(){
@@ -29,10 +30,6 @@ $(document).ready(function(){
 	
 	$(".dot").click(function(){
 		ChooseShift($(this));
-	});
-	
-	$(".boardHolder").mouseleave(function() {
-		//ShuffleCells();
 	});
 	
 });
@@ -56,13 +53,15 @@ function ExpandNavBar() {
 	{
 		$('.navBar').css('height', '90vh');
 		$('.navBar .navBarStem').css('top', '5%');
-		$('.container').css('top', '90vh');
+		$('.container').css({'top':'90vh', 'height':'10vh'});
+		//$('.container').css('height', '10vh');
 	}
 	else
 	{
 		$('.navBar').css('height', '10vh');
 		$('.navBar .navBarStem').css('top', '80%');
-		$('.container').css('top', '10vh');
+		$('.container').css({'top':'10vh', 'height':'90vh'});
+		//$('.container').css('top', '10vh');
 	}
 	
 }
@@ -83,7 +82,7 @@ function ChooseShift(objectClicked) {
 }
 
 function Shift (direction) {
-	$('.postSpread').css('right', currentSpreadRight + (direction * stepSize) + 'vw');
+	$('.postSpread, .postSpreadGap').css('right', currentSpreadRight + (direction * stepSize) + 'vw');
 	currentSpreadRight += stepSize * direction;
 }
 
@@ -100,15 +99,3 @@ var waitForFinalEvent = (function () {
     timers[uniqueId] = setTimeout(callback, ms);
   };
 })();
-
-function SwitchCell(target) {
-	
-}
-
-function ColorSchemeSwap() {
-	
-}
-
-function ColorUpdate() {
-	
-}

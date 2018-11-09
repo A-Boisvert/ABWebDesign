@@ -45,6 +45,18 @@
 		overflow: hidden;
 		border: solid 0.5vh #a7c3ed;
 	}
+	.navBarStem
+	{
+		width: 1vh;
+		height: 100vh;
+		background-color: #a7c3ed;
+		position: absolute;
+		top: 80%;
+		left: calc(50vw - 0.5vh);
+		z-index: -1;
+		overflow: hidden;
+	}
+	
 	.hamburger:hover + .navBar
 	{
 		height: /90vh;
@@ -80,17 +92,6 @@
 		left: calc(50vw - 2.5vh);
 		border-radius: 50%;
 	}
-	.navBarStem
-	{
-		width: 1vh;
-		height: 100vh;
-		background-color: #a7c3ed;
-		position: absolute;
-		top: 80%;
-		left: calc(50vw - 0.5vh);
-		z-index: -1;
-		overflow: hidden;
-	}
 	
 	
 	/* Body ////////////////////////////////////////////////////// */
@@ -103,23 +104,24 @@
 		margin: 0 auto;
 		border: solid 3vh /black;
 		overflow-y: scroll;
+		overflow-x: hidden;
 	}
 	.containerSpread
 	{
 		position: relative;
 		margin: 0 auto;
-		background-color: /red;
+		background-color: /cyan;
 		width: 50vw;
-		height: 70vh;		/* can push Gaps down */
+		height: /70vh;		/* can push Gaps down */
 		overflow: visible;
-		border: solid 2px /white;
+		border: solid 0px white;
 	}
 	
 	.postSpread
 	{
 		background-color: /#444444;
 		width: 181vw;		/* (containerSpread width * 3) + (postColumnGap * 2) + 1*/
-		height: 100%;
+		height: /100%;
 		overflow: hidden;
 		border: solid 2px /red;
 		margin: 0 auto;
@@ -131,36 +133,42 @@
 	.postSpreadGap
 	{
 		position:relative;
-		border: dashed 2px #333333;
-		width: 100%;
+		float: right;
+		right: -66vw;
+		border: dashed 0vh #333333;
+		width: 181vw;
 		height: 5vh;
 		background-color: /purple;
+		overflow: hidden;
+		transition: all .5s ease-out;
 	}
 	.postSpreadGapStem
 	{
-		position:/relative;
+		position:relative;
+		float: right;
 		width: 1vh;
 		height: 5vh;
 		background-color: #a7c3ed;
-		position: absolute;
+		right: calc(90.5vw - 1.5vw);
 		top: 0;
-		left: calc(50vw - 2px);
 		z-index: -1;
 	}
 	
 	.postColumn
 	{
+		position: relative;
 		background-color: purple;
 		width: 50vw;
-		height: 100%;
+		height: /100%;
 		float: left;
 	}
 	.postColumnGap
 	{
+		position: relative;
 		display: inline;
 		background-color: /cyan;
 		width: 15vw;
-		height: 100%;
+		height: 50px;
 		float: left;
 	}
 	.postColumnGapStem
@@ -172,8 +180,9 @@
 	}
 	.postSingle
 	{
+		position: relative;
 		width: 100%;
-		height: 100%;
+		height: /100%;
 		background-color: #282f54;
 		background-color: /purple;
 		padding: 2%;
@@ -208,8 +217,9 @@
 	/* Posts ////////////////////////////////////////////////////// */
 	#emptyPost
 	{
-		border: solid 0 red;
-		background-color: transparent;
+		border: solid 2px green;
+		background-color: /green;
+		opacity: 0;
 	}
 	#post001 
 	{
