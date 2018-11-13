@@ -9,8 +9,8 @@
 	
 	.container 
 	{
-		border: solid 2px #dd4400;
-		background-color: rgb(140,50,0);
+		border: solid 2px /#dd4400;
+		background-color: rgb(50,0,50);
 		width: 100vw;
 		height: 100vh;
 		margin: auto;

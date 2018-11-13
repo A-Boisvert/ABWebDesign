@@ -48,7 +48,7 @@ var bot1, bot2, bot3, bot4, bot5;
 var index1, index2, index3, index4, index5;
 var hexX, hexY;
 var h = 1;
-var currColor = 'rgb(50,50,50)';
+var currColor = 'rgb(50,0,50)';
 var currRGB = 0;
 var r = 0, g = 0, b = 0;
 var stepSize = 25;
