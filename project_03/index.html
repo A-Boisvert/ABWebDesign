@@ -165,6 +165,10 @@
 							<div class="title">1 - What Is Git?</div>
 							<div class="body">
 								
+								<div class="imageHolder">
+									<img src="../images/p03_01a_b.png">
+								</div>
+								
 								<p>
 								Having a distributed architecture, Git is an example of a DVCS (hence Distributed Version Control System). Rather than have only one single place for the full version history of the software as is common in once-popular version control systems like CVS or Subversion (also known as SVN), in Git, every developer's working copy of the code is also a repository that can contain the full history of all changes.
 								<br><br>
@@ -258,22 +262,33 @@
 							<div class="title">3A - Bash</div>
 							<div class="body">
 							
-								Lorem ipsum 
+								There are the original command-line tools, and there are many graphical user interfaces of varying capabilities. For this book, we will be using Git on the command line. For one, the command line is the only place you can run all Git commands — most of the GUIs implement only a partial subset of Git functionality for simplicity. If you know how to run the command-line version, you can probably also figure out how to run the GUI version, while the opposite is not necessarily true. Also, while your choice of graphical client is a matter of personal taste, all users will have the command-line tools installed and available.
 								<br><br>
-								Pellentesque 
+								So we will expect you to know how to open Terminal in Mac or Command Prompt or Powershell in Windows. If you don’t know what we’re talking about here, you may need to stop and research that quickly so that you can follow the rest of the examples and descriptions in this book.
 								<br><br>
-								Suspendisse d
+								These commands are nice because you can access them anywhere, even offline. If the manpages and this book aren’t enough and you need in-person help, you can try the #git or #github channel on the Freenode IRC server (irc.freenode.net). These channels are regularly filled with hundreds of people who are all very knowledgeable about Git and are often willing to help.
 								<br><br>
-								Pellentesque 
+								In addition, if you don’t need the full-blown manpage help, but just need a quick refresher on the available options for a Git command, you can ask for the more concise “help” output with the -h or --help options, as in:
 								<br><br>
-								Suspendisse dui 
+								$ git add -h
+								usage: git add [\<options\>] [--] \<pathspec\>...
 								<br><br>
-								Donec blandit 
+									-n, --dry-run         dry run<br>
+									-v, --verbose         be verbose<br>
 								<br><br>
-								Proin ne
+									-i, --interactive     interactive picking<br>
+									-p, --patch           select hunks interactively<br>
+									-e, --edit            edit current diff and apply<br>
+									-f, --force           allow adding otherwise ignored files<br>
+									-u, --update          update tracked files<br>
+									-N, --intent-to-add   record only the fact that the path will be added later<br>
+									-A, --all             add changes from all tracked and untracked files<br>
+									--ignore-removal      ignore paths removed in the working tree (same as --no-all)<br>
+									--refresh             don't add, only refresh the index<br>
+									--ignore-errors       just skip files which cannot be added because of errors<br>
+									--ignore-missing      check if - even missing - files are ignored in dry run<br>
+									--chmod \<(+/-)x\>      override the executable bit of the listed files<br>
 								<br><br>
-								Pellentesque 
-							
 							
 							</div>
 						</div>
@@ -281,7 +296,9 @@
 					
 					<div class="spaceBetweenPostContainer">
 						<div class="stemHorizontal" id="post003">
-							<div class="dot left"></div>
+							<div class="dot left">
+								<img src="../images/p03_arrowLeft.png">
+							</div>
 						</div>
 					</div>
 				
@@ -290,25 +307,31 @@
 							
 							<div class="title">3B - How To Use Git:</div>
 							<div class="body">
-							
-								Lorem 
-								<br><br>
-								ellentesque
-								<br><br>
-								Suspendisse dui 
-								<br><br>
-								Donec blandit 
-								<br><br>
-								Pellentesque 
-								<br><br>
-								Suspendiss
-								<br><br>
-								Donec bl
-								<br><br>
-								Proin nec
-								<br><br>
-								Pellentesque 
+														
+							Pushing Changes<br><br>
+							Your changes are now in the HEAD of your local working copy. To send those changes to your remote repository, execute 
+							git push origin master<br>
+							Change master to whatever branch you want to push your changes to. 
+							<br><br>
+							If you have not cloned an existing repository and want to connect your repository to a remote server, you need to add it with
+							git remote add origin \<server\>
+							Now you are able to push your changes to the selected remote server
+							branching
+							<br>
+							Branches are used to develop features isolated from each other. The master branch is the "default" branch when you create a repository. Use other branches for development and merge them back to the master branch upon completion.
+							<br><br>
 
+
+							create a new branch named "feature_x" and switch to it using<br>
+							git checkout -b feature_x<br>
+							switch back to master<br>
+							git checkout master<br>
+							and delete the branch again<br>
+							git branch -d feature_x<br>
+							a branch is not available to others unless you push the branch to your remote repository<br>
+							git push origin \<branch\>
+
+							<br><br>
 							
 							</div>
 							
@@ -317,7 +340,9 @@
 					
 					<div class="spaceBetweenPostContainer">
 						<div class="stemHorizontal" id="post003">
-							<div class="dot right"></div>
+							<div class="dot right">
+								<img src="../images/p03_arrowRight.png">
+							</div>
 						</div>
 					</div>
 					
@@ -326,17 +351,15 @@
 							<div class="title">3C - Third Party</div>
 							<div class="body">
 							
-								Lorem 
-								<br><br>
-								Pellentesque 
-								<br><br>
-								Suspendisse 
-								<br><br>
-								Donec blandit 
-								<br><br>
-								Proin
-								<br><br>
-								Pellentesque 
+								Some programs include:<br><br>
+								
+								SourceTree. (Platforms: Mac, Windows)<br>
+								GitHub Desktop. (Platforms: Mac, Windows)<br>
+								TortoiseGit. (Platforms: Windows. Price: Free)<br>
+								Git Extensions. (Platforms: Linux, Mac, Windows)<br>
+								GitKraken. (Platforms: Linux, Mac, Windows)<br>
+								SmartGit. (Platforms: Linux, Mac, Windows)<br>
+								Tower. (Platforms: Mac, Windows)<br>
 
 
 							
@@ -376,17 +399,37 @@
 								Configuring a Git repo for remote collaboration
 								Common Git version control commands
 								<br><br>
-								Pellentesque 
+								update & merge<br><br>
+								to update your local repository to the newest commit, execute 
+								git pull
+								in your working directory to fetch and merge remote changes.
+								to merge another branch into your active branch (e.g. master), use
+								git merge \<branch\>
+								in both cases git tries to auto-merge changes. Unfortunately, this is not always possible and results in conflicts. You are responsible to merge those conflicts manually by editing the files shown by git. After changing, you need to mark them as merged with
+								git add \<filename\>
+								before merging changes, you can also preview them by using
+								git diff \<source_branch\> \<target_branch\>
+
+								tagging
 								<br><br>
-								Pellentesque 
+								it's recommended to create tags for software releases. this is a known concept, which also exists in SVN. You can create a new tag named 1.0.0 by executing<br>
+								git tag 1.0.0 1b2e1d63ff<br>
+								the 1b2e1d63ff stands for the first 10 characters of the commit id you want to reference with your tag. You can get the commit id by looking at the... <br>
 								<br><br>
-								Suspendisse dui purus,
+								
+								log
 								<br><br>
-								Donec blandit 
-								<br><br>
-								Proin nec augue.
-								<br><br>
-								Pellentesque 
+								in its simplest form, you can study repository history using.. git log<br>
+								You can add a lot of parameters to make the log look like what you want. To see only the commits of a certain author:<br>
+								git log --author=bob<br>
+								To see a very compressed log where each commit is one line:<br>
+								git log --pretty=oneline<br>
+								Or maybe you want to see an ASCII art tree of all the branches, decorated with the names of tags and branches:<br> 
+								git log --graph --oneline --decorate --all<br>
+								See only which files have changed: <br>
+								git log --name-status<br>
+								These are just a few of the possible parameters you can use. For more, see git log --help<br>
+								<br>
 
 								</p>
 							
@@ -396,7 +439,9 @@
 					
 					<div class="spaceBetweenPostContainer">
 						<div class="stemHorizontal" id="post003">
-							<div class="dot right"></div>
+							<div class="dot right">
+								<img src="../images/p03_arrowRight.png">
+							</div>
 						</div>
 					</div>
 
@@ -475,7 +520,9 @@
 					
 					<div class="spaceBetweenPostContainer">
 						<div class="stemHorizontal" id="post003">
-							<div class="dot right"></div>
+							<div class="dot right">
+								<img src="../images/p03_arrowRight.png">
+							</div>
 						</div>
 					</div>
 
@@ -554,7 +601,9 @@
 					
 					<div class="spaceBetweenPostContainer">
 						<div class="stemHorizontal" id="post003">
-							<div class="dot right"></div>
+							<div class="dot right">
+								<img src="../images/p03_arrowRight.png">
+							</div>
 						</div>
 					</div>
 

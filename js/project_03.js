@@ -106,10 +106,12 @@ function ChooseShift(objectClicked) {
 		if (objectClicked.hasClass("right"))
 		{
 			Shift(1);	
+			objectClicked.find('img').attr("src","../images/p03_arrowLeft.png")
 		}
 		else if (objectClicked.hasClass("left"))
 		{
 			Shift(-1);
+			objectClicked.find('img').attr("src","../images/p03_arrowRight.png")
 		}
 		
 		objectClicked.toggleClass("right left");
@@ -163,24 +165,39 @@ function AdjustWindowSensitiveVariables()
 			currentSpreadRight = -123.5;
 			Shift(0);
 			stepSize = 100;
+			
+			$('.left').css('width', '15vh');
+			$('.left').css('left', 'calc(50% - 11.5vh)');
+			$('.right').css('width', '15vh');
+			$('.right').css('left', 'calc(50% - 4.5vh)');
+			
+			$('.imageHolder').css('left','-3vw');
+			
+			$('.imageHolder').css({'left':'-20vw', 'width':'90vw'});
 		break;
 		
 		case 2:
 			currentSpreadRight = -106;
 			Shift(0);
 			stepSize = 90;
+			
+			$('.imageHolder').css({'left':'-5vw', 'width':'60vw'});
 		break;
 		
 		case 3:
 			currentSpreadRight = -76;
 			Shift(0);
 			stepSize = 70;
+			
+			$('.imageHolder').css({'left':'-5vw', 'width':'50vw'});
 		break;
 		
 		case 4:
 			currentSpreadRight = -66;
 			Shift(0);
 			stepSize = 65;
+			
+			$('.imageHolder').css({'left':'-11vw', 'width':'50vw'});
 		break;
 	}
 }

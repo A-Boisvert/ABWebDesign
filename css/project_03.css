@@ -172,7 +172,7 @@
 		font-family: sans-serif;
 		font-weight: bold;
 		font-size: 16pt;
-		color: white;
+		color: var(--bgDarkBlue);
 	}
 	
 	
@@ -277,7 +277,7 @@
 	{
 		width: 100%;
 		min-height: 50px;
-		border: dashed 1px #444444;
+		border: dashed 1px /#444444;
 		font-family: 'PT Sans Narrow', sans-serif;
 		font-size: 3em;
 		color: white;
@@ -292,10 +292,26 @@
 		padding: 5px;
 		width: 60%;
 		min-height: 5vh;
-		border: dashed 1px #555555;
+		border: dashed 1px /#555555;
 		font-family: 'PT Sans Narrow', sans-serif;
 		font-size: 1.3em;
 		color: white;
+	}
+	
+	.imageHolder
+	{
+		width: 50vw;
+		min-height:22vw;
+		position: relative;
+		left: -11vw;
+		border: solid 2px /white;
+	}
+	
+	.body img
+	{
+		width: 100%;
+		height: auto;
+		position: absolute;
 	}
 	
 	
@@ -346,17 +362,22 @@
 	{
 		width: 5vh;
 		height: 5vh;
-		background-color: #a7c3ed;
+		background-color: transparent;
 		position: absolute;
 		border-radius: 50%;
 		bottom: -7vh;
 		left: calc(50% - 2.5vh);
+		z-index: 5;
 	}
-	.right
+	.right img
 	{
+		width: 100%;
+		height: 100%;
 	}
-	.left
+	.left img
 	{
+		width: 100%;
+		height: 100%;
 	}
 	
 
