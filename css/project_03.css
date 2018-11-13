@@ -35,7 +35,7 @@
 	}
 	
 	/* Top Navigation Bar ///////////////////////////////////////////// */
-	.navBar
+	.fixedNavigationBar
 	{
 		background-color: var(--bgDarkBlue);
 		position: fixed;
@@ -45,7 +45,7 @@
 		overflow: hidden;
 		border: solid 0.5vh #a7c3ed;
 	}
-	.navBarStem
+	.fixedNavigationBarStem
 	{
 		width: 1vh;
 		height: 100vh;
@@ -57,15 +57,15 @@
 		overflow: hidden;
 	}
 	
-	.hamburger:hover + .navBar
+	.hamburger:hover + .fixedNavigationBar
 	{
 		height: /90vh;
 	}
-	.hamburger:hover + .navBar .navBarStem
+	.hamburger:hover + .fixedNavigationBar .fixedNavigationBarStem
 	{
 		top: /5%;
 	}
-	.hamburger:hover ~ .container
+	.hamburger:hover ~ .contentBelowNavigationBar
 	{
 		top: /90vh;
 		overflow: /hidden;
@@ -93,9 +93,74 @@
 		border-radius: 50%;
 	}
 	
+	.grid
+	{
+		border: dashed .1vh #aaaaaa;
+		width: 30vh;
+		height: 70vh;
+		margin: 0 auto;
+		position: relative;
+		top: 0vh;
+	}
+	
+	.row
+	{
+		border: solid .1vh #555555;
+		width: 100%;
+		height: 10vh;
+		position: relative;
+	}
+	
+	.oneThird
+	{
+		border: solid .2vh green;
+		width: 33.3%;
+		height: 100%;
+		float: left;
+	}
+	
+	.centerStems
+	{
+		width: 70%;
+		height: 1vh;
+		background-color: #a7c3ed;
+		position: absolute;
+		left: 15%;
+		top: 50%;
+	}
+	.centerStemRight
+	{
+		width: 40%;
+		height: 1vh;
+		background-color: #a7c3ed;
+		position: absolute;
+		left: 45%;
+		top: 50%;
+	}
+	
+	.emptyThird
+	{
+		border: solid .2vh transparent;
+		width: 33.3%;
+		height: 100%;
+		float: left;
+	}
+	
+	.navDot
+	{
+		width: 5vh;
+		height: 5vh;
+		background-color: #a7c3ed;
+		position: relative;
+		border-radius: 50%;
+		bottom: -7vh;
+		left: calc((50% - 2.5vh) + 4px);
+		top: 2.5vh;
+	}
+	
 	
 	/* Body ////////////////////////////////////////////////////// */
-	.container
+	.contentBelowNavigationBar
 	{
 		position: relative;
 		top: 10vh;
@@ -106,63 +171,76 @@
 		overflow-y: scroll;
 		overflow-x: hidden;
 	}
-	.containerSpread
+	.centerAnchor
 	{
-		position: relative;
 		margin: 0 auto;
-		background-color: /cyan;
 		width: 50vw;
-		height: /70vh;		/* can push Gaps down */
-		overflow: visible;
-		border: solid 0px white;
 	}
 	
-	.postSpread
+	.ThreePostHolder
 	{
 		background-color: /#444444;
-		width: 181vw;		/* (containerSpread width * 3) + (postColumnGap * 2) + 1*/
+		width: 181vw;		/* (centerAnchor width * 3) + (spaceBetweenPostContainer * 2) + 1*/
 		height: /100%;
 		overflow: hidden;
 		border: solid 2px /red;
 		margin: 0 auto;
 		position: relative;
 		float: right;
-		right: -66vw;		/* negative of (((postSpread width - 1) - containerSpread width) / 2) + 1 */
+		right: -66vw;		/* negative of (((ThreePostHolder width - 1) - centerAnchor width) / 2) + 1 */
 		transition: all .5s ease-out;
 	}
-	.postSpreadGap
+	.spaceBetweenThreePostHolders
 	{
 		position:relative;
 		float: right;
 		right: -66vw;
-		border: dashed 0vh #333333;
+		border: dashed .3vh #333333;
 		width: 181vw;
 		height: 5vh;
 		background-color: /purple;
-		overflow: hidden;
+		overflow: visible;
 		transition: all .5s ease-out;
 	}
-	.postSpreadGapStem
+	/* .stemVertical */
+	/* { */
+		/* position:relative; */
+		/* float: right; */
+		/* width: /1vh; */
+		/* height: 100%; */
+		/* background-color: #a7c3ed; */
+		/* right: calc(90.5vw - 1.5vw); */
+		/* top: 0; */
+		/* z-index: -1; */
+	/* } */
+	.stemVertical
 	{
-		position:relative;
-		float: right;
+		left: 50%;
+		height: 100%;
+		position: relative;
 		width: 1vh;
-		height: 5vh;
 		background-color: #a7c3ed;
-		right: calc(90.5vw - 1.5vw);
-		top: 0;
 		z-index: -1;
 	}
+	.backStem
+	{
+		left: 50%;
+		height: 100%;
+		position: fixed;
+		width: 1vh;
+		background-color: #a7c3ed;
+		z-index: -1;
+		transition: all .2s cubic-bezier(1,.01,1,.01) .1s;
+	}
 	
-	.postColumn
+	.postContainer
 	{
 		position: relative;
 		background-color: purple;
 		width: 50vw;
-		height: /100%;
 		float: left;
 	}
-	.postColumnGap
+	.spaceBetweenPostContainer
 	{
 		position: relative;
 		display: inline;
@@ -171,14 +249,14 @@
 		height: 50px;
 		float: left;
 	}
-	.postColumnGapStem
+	.stemHorizontal
 	{
 		position: relative;
 		top: 50%;
 		width: 100%;
 		background-color: black;
 	}
-	.postSingle
+	.post
 	{
 		position: relative;
 		width: 100%;
@@ -188,7 +266,7 @@
 		padding: 2%;
 		border: solid 2px blue;
 	}
-	.postTitle
+	.title
 	{
 		width: 100%;
 		min-height: 50px;
@@ -201,7 +279,7 @@
 		font-weight: bold;
 		margin-bottom: 2vh;
 	}
-	.postBody
+	.body
 	{
 		margin: 0 auto;
 		padding: 5px;
@@ -225,18 +303,18 @@
 	{
 		border: solid 0.5vh #5a8bd6;
 	}
-	#post001 .postTitle
+	#post001 .title
 	{
 		color: #5a8bd6;
 		background-color: /red;
 	}
-	#post001 .postTitle p
+	#post001 .title p
 	{
 		position: relative;
 		top: -55px;
 		font-size: 3em;
 	}
-	#post001 .postColumnGapStem
+	#post001 .stemHorizontal
 	{
 		background-color: red;
 	}
@@ -244,7 +322,7 @@
 	{
 		border: solid 0.5vh #0c69f5;
 	}
-	#post002 .postTitle
+	#post002 .title
 	{
 		color: #0c69f5;
 	}
@@ -252,7 +330,7 @@
 	{
 		border: solid 0.5vh #289786;
 	}
-	#post003 .postTitle
+	#post003 .title
 	{
 		color: #289786;
 	}
@@ -287,7 +365,7 @@
 		display: block;
 	}
 	
-	/.postSingle
+	/.post
 	{
 		margin: 0 auto;
 		width: 50%;
@@ -309,7 +387,7 @@
 		display: block;
 	}
 	
-	/.postSingle
+	/.post
 	{
 		margin: 0 auto;
 		width: 60%;
@@ -331,7 +409,7 @@
 		display: block;
 	}
 	
-	/.postSingle
+	/.post
 	{
 		margin: 0 auto;
 		width: 80%;
@@ -339,6 +417,7 @@
 		border: solid 3px black;
 		background-color: #282f54;
 	}
+	
 }
 
 /* Mobile */
@@ -353,7 +432,7 @@
 		display: none;
 	}
 	
-	/.postSingle
+	/.post
 	{
 		margin: 0 auto;
 		width: 95%;

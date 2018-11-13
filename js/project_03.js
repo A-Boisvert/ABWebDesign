@@ -13,12 +13,15 @@ $(function() {
 
 $(document).ready(function(){
 
+	currentShift = 0;
+	CheckBackStem();
+
 	$(window).resize(function() {
-		$('.postSpread, .postSpreadGap').css('transition', 'all 0s linear');
+		$('.ThreePostHolder, .postSpreadGap').css('transition', 'all 0s linear');
 		
 		waitForFinalEvent(function(){
 			//alert('Resize...');
-			$('.postSpread, .postSpreadGap').css('transition', 'all .5s ease-out');
+			$('.ThreePostHolder, .postSpreadGap').css('transition', 'all .5s ease-out');
 		}, 500, "some unique string");
 	});
 	
@@ -32,16 +35,16 @@ $(document).ready(function(){
 		ChooseShift($(this));
 	});
 	
+	$(".mobile, .tablet, .dekstop, .largeDesktop").click(function()
+	{
+		console.log('current Offset is ' + currentShift);
+	});
+	
 });
 
 var navToggle = false;
 
-var currentShift = {
-        OneLeft: -1,
-        Center: 0,
-		OneRight: 1,
-		TwoRight: 2
-};
+var currentShift = 0;
 
 var startingSpreadRight = -66;
 var currentSpreadRight = startingSpreadRight;
@@ -51,17 +54,15 @@ function ExpandNavBar() {
 	
 	if (navToggle)
 	{
-		$('.navBar').css('height', '90vh');
-		$('.navBar .navBarStem').css('top', '5%');
-		$('.container').css({'top':'90vh', 'height':'10vh'});
-		//$('.container').css('height', '10vh');
+		$('.fixedNavigationBar').css('height', '90vh');
+		$('.fixedNavigationBar .fixedNavigationBarStem').css('top', '5%');
+		$('.contentBelowNavigationBar').css({'top':'90vh', 'height':'10vh'});
 	}
 	else
 	{
-		$('.navBar').css('height', '10vh');
-		$('.navBar .navBarStem').css('top', '80%');
-		$('.container').css({'top':'10vh', 'height':'90vh'});
-		//$('.container').css('top', '10vh');
+		$('.fixedNavigationBar').css('height', '10vh');
+		$('.fixedNavigationBar .fixedNavigationBarStem').css('top', '80%');
+		$('.contentBelowNavigationBar').css({'top':'10vh', 'height':'90vh'});
 	}
 	
 }
@@ -82,8 +83,27 @@ function ChooseShift(objectClicked) {
 }
 
 function Shift (direction) {
-	$('.postSpread, .postSpreadGap').css('right', currentSpreadRight + (direction * stepSize) + 'vw');
+	$('.ThreePostHolder, .spaceBetweenThreePostHolders').css('right', currentSpreadRight + (direction * stepSize) + 'vw');
 	currentSpreadRight += stepSize * direction;
+	currentShift += direction;
+
+	CheckBackStem();
+}
+
+function CheckBackStem ()
+{
+	
+	if (currentShift != 0) //clicking off of 0
+	{
+		$('.backStem').css({'width':'0vh', 'transition':'all .1s cubic-bezier(1,.01,1,.01)'});		// og is 0
+		$('.stemVertical').css('width', '1vh');
+	}
+	else	//shifting back to 0
+	{
+		$('.backStem').css({'width':'1vh', 'transition':'all .2s cubic-bezier(1,.01,1,.01) .2s'});
+		$('.stemVertical').css('width', '0vh');
+	}
+	
 }
 
 // gotten from https://stackoverflow.com/questions/2854407/javascript-jquery-window-resize-how-to-fire-after-the-resize-is-completed
