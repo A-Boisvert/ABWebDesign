@@ -12,6 +12,11 @@
 		--bgDarkBlue: #0e132f;
 	}
 	
+	[scrollFlag]
+	{
+		
+	}
+	
 	html
 	{
 		
@@ -95,17 +100,17 @@
 	
 	.grid
 	{
-		border: dashed .1vh #aaaaaa;
+		border: dashed .1vh /#aaaaaa;
 		width: 30vh;
 		height: 70vh;
 		margin: 0 auto;
 		position: relative;
-		top: 0vh;
+		top: 0.5vh;
 	}
 	
 	.row
 	{
-		border: solid .1vh #555555;
+		border: solid .1vh /#555555;
 		width: 100%;
 		height: 10vh;
 		position: relative;
@@ -113,7 +118,7 @@
 	
 	.oneThird
 	{
-		border: solid .2vh green;
+		border: solid .2vh /green;
 		width: 33.3%;
 		height: 100%;
 		float: left;
@@ -127,6 +132,7 @@
 		position: absolute;
 		left: 15%;
 		top: 50%;
+		z-index: -2;
 	}
 	.centerStemRight
 	{
@@ -136,6 +142,7 @@
 		position: absolute;
 		left: 45%;
 		top: 50%;
+		z-index: -2;
 	}
 	
 	.emptyThird
@@ -156,6 +163,16 @@
 		bottom: -7vh;
 		left: calc((50% - 2.5vh) + 4px);
 		top: 2.5vh;
+	}
+	.navDot p
+	{
+		position: absolute;
+		top: -15%;
+		left: 25%;
+		font-family: sans-serif;
+		font-weight: bold;
+		font-size: 16pt;
+		color: white;
 	}
 	
 	
@@ -180,7 +197,7 @@
 	.ThreePostHolder
 	{
 		background-color: /#444444;
-		width: 181vw;		/* (centerAnchor width * 3) + (spaceBetweenPostContainer * 2) + 1*/
+		width: 181vw;		/* (postContainer width * 3) + (spaceBetweenPostContainer * 2) + 1*/
 		height: /100%;
 		overflow: hidden;
 		border: solid 2px /red;
@@ -195,24 +212,13 @@
 		position:relative;
 		float: right;
 		right: -66vw;
-		border: dashed .3vh #333333;
+		border: dashed .3vh /#333333;
 		width: 181vw;
 		height: 5vh;
 		background-color: /purple;
 		overflow: visible;
 		transition: all .5s ease-out;
 	}
-	/* .stemVertical */
-	/* { */
-		/* position:relative; */
-		/* float: right; */
-		/* width: /1vh; */
-		/* height: 100%; */
-		/* background-color: #a7c3ed; */
-		/* right: calc(90.5vw - 1.5vw); */
-		/* top: 0; */
-		/* z-index: -1; */
-	/* } */
 	.stemVertical
 	{
 		left: 50%;
@@ -239,6 +245,7 @@
 		background-color: purple;
 		width: 50vw;
 		float: left;
+		border: solid 1px /white;
 	}
 	.spaceBetweenPostContainer
 	{
@@ -365,14 +372,7 @@
 		display: block;
 	}
 	
-	/.post
-	{
-		margin: 0 auto;
-		width: 50%;
-		min-height: 50px;
-		border: solid 3px black;
-		background-color: #282f54;
-	}
+	
 }
 
 /* Desktop */
@@ -387,13 +387,23 @@
 		display: block;
 	}
 	
-	/.post
+	.ThreePostHolder
 	{
-		margin: 0 auto;
-		width: 60%;
-		min-height: 50px;
-		border: solid 3px black;
-		background-color: #282f54;
+		width: 201vw;		/* (postContainer width * 3) + (spaceBetweenPostContainer * 2) + 1*/
+		right: -76vw;		/* negative of (((ThreePostHolder width - 1) - centerAnchor width) / 2) + 1 */
+	}
+	.spaceBetweenThreePostHolders
+	{
+		right: -76vw;
+		width: 201vw;
+	}
+	.postContainer
+	{
+		width: 60vw;
+	}
+	.spaceBetweenPostContainer
+	{
+		width: 10vw;
 	}
 }	
 
@@ -409,13 +419,23 @@
 		display: block;
 	}
 	
-	/.post
+	.ThreePostHolder
 	{
-		margin: 0 auto;
-		width: 80%;
-		min-height: 50px;
-		border: solid 3px black;
-		background-color: #282f54;
+		width: 261vw;		/* (postContainer width * 3) + (spaceBetweenPostContainer * 2) + 1*/
+		right: -106vw;		/* negative of (((ThreePostHolder width - 1) - centerAnchor width) / 2) + 1 */
+	}
+	.spaceBetweenThreePostHolders
+	{
+		right: -106vw;
+		width: 261vw;
+	}
+	.postContainer
+	{
+		width: 80vw;
+	}
+	.spaceBetweenPostContainer
+	{
+		width: 10vw;
 	}
 	
 }
@@ -432,12 +452,22 @@
 		display: none;
 	}
 	
-	/.post
+	.ThreePostHolder
 	{
-		margin: 0 auto;
-		width: 95%;
-		min-height: 50px;
-		border: solid 3px black;
-		background-color: #282f54;
+		width: 296vw;		/* (postContainer width * 3) + (spaceBetweenPostContainer * 2) + 1*/
+		right: -123.5vw;		/* negative of (((ThreePostHolder width - 1) - centerAnchor width) / 2) + 1 */
+	}
+	.spaceBetweenThreePostHolders
+	{
+		right: -123.5vw;
+		width: 296vw;
+	}
+	.postContainer
+	{
+		width: 95vw;
+	}
+	.spaceBetweenPostContainer
+	{
+		width: 5vw;
 	}
 }

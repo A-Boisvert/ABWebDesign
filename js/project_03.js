@@ -15,9 +15,11 @@ $(document).ready(function(){
 
 	currentShift = 0;
 	CheckBackStem();
+	CheckWindowSize();
 
 	$(window).resize(function() {
 		$('.ThreePostHolder, .postSpreadGap').css('transition', 'all 0s linear');
+		CheckWindowSize();
 		
 		waitForFinalEvent(function(){
 			//alert('Resize...');
@@ -27,12 +29,17 @@ $(document).ready(function(){
 	
 	$(".hamburger").click(function(){
 		navToggle = !navToggle;
-		console.log('navToggle is ' + navToggle);
+		//console.log('navToggle is ' + navToggle);
 		ExpandNavBar();
 	});
 	
 	$(".dot").click(function(){
-		ChooseShift($(this));
+		ChooseShift($(this));				// BUG : if you click one dot, scroll down and click a different dot, they both shift same direction
+	});
+	
+	$(".navDot").click(function( )
+	{
+		SnapScroll($(this));
 	});
 	
 	$(".mobile, .tablet, .dekstop, .largeDesktop").click(function()
@@ -49,6 +56,32 @@ var currentShift = 0;
 var startingSpreadRight = -66;
 var currentSpreadRight = startingSpreadRight;
 var stepSize = 65;
+
+var currentWindowSize = 0;
+
+function SnapScroll(navDot)
+{
+	var grabID = navDot.attr('scrollFlag');
+	var postContainers = $('.postContainer');
+	
+	for (i = 0; i < postContainers.length; ++i) 
+	{
+		console.log('offsetTops: ' + $(postContainers[i]).offset().top);
+		
+		if ($(postContainers[i]).attr('scrollFlag') == grabID)
+		{
+			var grabPostTop = $(postContainers[i]).offset().top;
+		}
+	}
+	
+    $(".contentBelowNavigationBar").scrollTop(grabPostTop);
+	console.log('scrolling to: ' + grabPostTop);
+	
+	navToggle = !navToggle;
+	ExpandNavBar();
+	
+	counter=0;
+}
 
 function ExpandNavBar() {
 	
@@ -104,6 +137,52 @@ function CheckBackStem ()
 		$('.stemVertical').css('width', '0vh');
 	}
 	
+}
+
+function CheckWindowSize()
+{
+	if ($(window).width() > 1024)
+		currentWindowSize = 4;
+	else if ($(window).width() <= 1024)
+		currentWindowSize = 3;
+	if ($(window).width() <= 768)
+		currentWindowSize = 2;
+	if ($(window).width() <= 482)
+		currentWindowSize = 1;
+	
+	$('.debugBlock').text(' ' + currentWindowSize);
+	
+	AdjustWindowSensitiveVariables();
+}
+
+function AdjustWindowSensitiveVariables()
+{
+	switch (currentWindowSize){
+		
+		case 1:
+			currentSpreadRight = -123.5;
+			Shift(0);
+			stepSize = 100;
+		break;
+		
+		case 2:
+			currentSpreadRight = -106;
+			Shift(0);
+			stepSize = 90;
+		break;
+		
+		case 3:
+			currentSpreadRight = -76;
+			Shift(0);
+			stepSize = 70;
+		break;
+		
+		case 4:
+			currentSpreadRight = -66;
+			Shift(0);
+			stepSize = 65;
+		break;
+	}
 }
 
 // gotten from https://stackoverflow.com/questions/2854407/javascript-jquery-window-resize-how-to-fire-after-the-resize-is-completed
