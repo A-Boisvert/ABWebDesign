@@ -6,10 +6,20 @@
 	body
 	{
 		margin: 0;
-		background-color: #0e132f;
+		background-color: #161340;
 		font-size: 12pt;
 		--post001Color: #5a8bd6;
-		--bgDarkBlue: #0e132f;
+		/* --bgDarkBlue: #0e132f; */
+		--bgDarkBlue: #161340;
+		--borderColor: #a7c3ed;
+		
+		--postColor01: #30289E;
+		--postColor02: #2A238D;
+		--postColor03: #251E7B;
+		--postColor04: #1F1A6A;
+		--postColor05: #191558;
+		--postColor06: #141047;
+		--postColor07: #0E0B35;
 	}
 	
 	[scrollFlag]
@@ -279,7 +289,7 @@
 		min-height: 50px;
 		border: dashed 1px /#444444;
 		font-family: 'PT Sans Narrow', sans-serif;
-		font-size: 3em;
+		font-size: 6em;
 		color: white;
 		text-align: center;
 		text-transform: uppercase;
@@ -293,7 +303,7 @@
 		width: 60%;
 		min-height: 5vh;
 		border: dashed 1px /#555555;
-		font-family: 'PT Sans Narrow', sans-serif;
+		font-family: 'Nanum Gothic', sans-serif;
 		font-size: 1.3em;
 		color: white;
 	}
@@ -301,7 +311,7 @@
 	.imageHolder
 	{
 		width: 50vw;
-		min-height:22vw;
+		min-height: 35vw;
 		position: relative;
 		left: -11vw;
 		border: solid 2px /white;
@@ -324,11 +334,12 @@
 	}
 	#post001 
 	{
-		border: solid 0.5vh #5a8bd6;
+		border: solid 0.5vh var(--borderColor);
+		background-color: var(--postColor01);
 	}
 	#post001 .title
 	{
-		color: #5a8bd6;
+		color: var(--borderColor);
 		background-color: /red;
 	}
 	#post001 .title p
@@ -343,19 +354,57 @@
 	}
 	#post002 
 	{
-		border: solid 0.5vh #0c69f5;
+		border: solid 0.5vh var(--borderColor);
+		background-color: var(--postColor02);
 	}
 	#post002 .title
 	{
-		color: #0c69f5;
+		color: var(--borderColor);
 	}
 	#post003
 	{
-		border: solid 0.5vh #289786;
+		border: solid 0.5vh var(--borderColor);
+		background-color: var(--postColor03);
 	}
 	#post003 .title
 	{
-		color: #289786;
+		color: var(--borderColor);
+	}
+	#post004
+	{
+		border: solid 0.5vh var(--borderColor);
+		background-color: var(--postColor04);
+	}
+	#post004 .title
+	{
+		color: var(--borderColor);
+	}
+	#post005
+	{
+		border: solid 0.5vh var(--borderColor);
+		background-color: var(--postColor05);
+	}
+	#post005 .title
+	{
+		color: var(--borderColor);
+	}
+	#post006
+	{
+		border: solid 0.5vh var(--borderColor);
+		background-color: var(--postColor06);
+	}
+	#post006 .title
+	{
+		color: var(--borderColor);
+	}
+	#post007
+	{
+		border: solid 0.5vh var(--borderColor);
+		background-color: var(--postColor07);
+	}
+	#post007 .title
+	{
+		color: var(--borderColor);
 	}
 
 	.dot
@@ -426,6 +475,11 @@
 	{
 		width: 10vw;
 	}
+	
+	.title
+	{
+		font-size: 4em;
+	}
 }	
 
 /* Tablet */
@@ -459,6 +513,11 @@
 		width: 10vw;
 	}
 	
+	.title
+	{
+		font-size: 4em;
+	}
+	
 }
 
 /* Mobile */
@@ -490,5 +549,10 @@
 	.spaceBetweenPostContainer
 	{
 		width: 5vw;
+	}
+	
+	.title
+	{
+		font-size: 3em;
 	}
 }

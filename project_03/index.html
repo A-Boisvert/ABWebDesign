@@ -11,6 +11,8 @@
 		
 		<link href="https://fonts.googleapis.com/css?family=PT+Sans+Narrow" rel="stylesheet">
 		
+		<link href="https://fonts.googleapis.com/css?family=Lora|Nanum+Gothic" rel="stylesheet">
+		
 	</head>
 	
 	<body>
@@ -221,15 +223,14 @@
 								
 								<p>
 								Switching from a centralized version control system to Git changes the way your development team creates software. And, if you’re a company that relies on its software for mission-critical applications, altering your development workflow impacts your entire business.
-								<br><br>
+								<h3>Every Change Recordable</h3>
 								Feature branches provide an isolated environment for every change to your codebase. When a developer wants to start working on something—no matter how big or small—they create a new branch. This ensures that the master branch always contains production-quality code.
 								<br><br>
-								Having a full local history makes Git fast, since it means you don’t need a network connection to create commits, inspect previous versions of a file, or perform diffs between commits.
-								<br><br>
-								More frequent releases means more frequent customer feedback and faster updates in reaction to that feedback. Instead of waiting for the next release 8 weeks from now, you can push a solution out to customers as quickly as your developers can write the code.
-								<br><br>
 								Feature branches lend themselves to rapid prototyping. Whether your UX/UI designers want to implement an entirely new user flow or simply replace some icons, checking out a new branch gives them a sandboxed environment to play with. This lets designers see how their changes will look in a real working copy of the product without the threat of breaking existing functionality.
-								<br><br>
+								<h3>Local Histories</h3>
+								Having a full local history makes Git fast, since it means you don’t need a network connection to create commits, inspect previous versions of a file, or perform diffs between commits.
+								<h3>Faster Releases</h3>
+								More frequent releases means more frequent customer feedback and faster updates in reaction to that feedback. Instead of waiting for the next release 8 weeks from now, you can push a solution out to customers as quickly as your developers can write the code.
 
 								</p>
 							
@@ -269,7 +270,7 @@
 								These commands are nice because you can access them anywhere, even offline. If the manpages and this book aren’t enough and you need in-person help, you can try the #git or #github channel on the Freenode IRC server (irc.freenode.net). These channels are regularly filled with hundreds of people who are all very knowledgeable about Git and are often willing to help.
 								<br><br>
 								In addition, if you don’t need the full-blown manpage help, but just need a quick refresher on the available options for a Git command, you can ask for the more concise “help” output with the -h or --help options, as in:
-								<br><br>
+								<h3>Commands</h3>
 								$ git add -h
 								usage: git add [\<options\>] [--] \<pathspec\>...
 								<br><br>
@@ -308,7 +309,7 @@
 							<div class="title">3B - How To Use Git:</div>
 							<div class="body">
 														
-							Pushing Changes<br><br>
+							<h3>Pushing Changes</h3>
 							Your changes are now in the HEAD of your local working copy. To send those changes to your remote repository, execute 
 							git push origin master<br>
 							Change master to whatever branch you want to push your changes to. 
@@ -321,8 +322,8 @@
 							Branches are used to develop features isolated from each other. The master branch is the "default" branch when you create a repository. Use other branches for development and merge them back to the master branch upon completion.
 							<br><br>
 
-
-							create a new branch named "feature_x" and switch to it using<br>
+							<h3>Example</h3>
+							Create a new branch named "feature_x" and switch to it using<br>
 							git checkout -b feature_x<br>
 							switch back to master<br>
 							git checkout master<br>
@@ -351,7 +352,7 @@
 							<div class="title">3C - Third Party</div>
 							<div class="body">
 							
-								Some programs include:<br><br>
+								<h3>Some programs include:</h3>
 								
 								SourceTree. (Platforms: Mac, Windows)<br>
 								GitHub Desktop. (Platforms: Mac, Windows)<br>
@@ -388,7 +389,7 @@
 					</div>
 					
 					<div class="postContainer" scrollFlag="fourA">
-						<div class="post" id="post002">
+						<div class="post" id="post004">
 							<div class="title">4A - Basic Techniques</div>
 							<div class="body">
 								
@@ -398,8 +399,8 @@
 								Committing a modified version of a file to the repo
 								Configuring a Git repo for remote collaboration
 								Common Git version control commands
-								<br><br>
-								update & merge<br><br>
+								
+								<h3>Update & Merge</h3>
 								to update your local repository to the newest commit, execute 
 								git pull
 								in your working directory to fetch and merge remote changes.
@@ -410,15 +411,13 @@
 								before merging changes, you can also preview them by using
 								git diff \<source_branch\> \<target_branch\>
 
-								tagging
-								<br><br>
+								<h3>Tagging</h3>
 								it's recommended to create tags for software releases. this is a known concept, which also exists in SVN. You can create a new tag named 1.0.0 by executing<br>
 								git tag 1.0.0 1b2e1d63ff<br>
 								the 1b2e1d63ff stands for the first 10 characters of the commit id you want to reference with your tag. You can get the commit id by looking at the... <br>
 								<br><br>
 								
-								log
-								<br><br>
+								<h3>Log</h3>
 								in its simplest form, you can study repository history using.. git log<br>
 								You can add a lot of parameters to make the log look like what you want. To see only the commits of a certain author:<br>
 								git log --author=bob<br>
@@ -446,7 +445,7 @@
 					</div>
 
 					<div class="postContainer" scrollFlag="fourB">
-						<div class="post" id="post002">
+						<div class="post" id="post004">
 							<div class="title">4B - Offline</div>
 							<div class="body">
 								
@@ -493,7 +492,7 @@
 					</div>
 					
 					<div class="postContainer" scrollFlag="fiveA">
-						<div class="post" id="post002">
+						<div class="post" id="post005">
 							<div class="title">5A - Push & Pull</div>
 							<div class="body">
 								
@@ -527,7 +526,7 @@
 					</div>
 
 					<div class="postContainer" scrollFlag="fiveC">
-						<div class="post" id="post002">
+						<div class="post" id="post005">
 							<div class="title">5B - Branches</div>
 							<div class="body">
 								
@@ -574,7 +573,7 @@
 					</div>
 					
 					<div class="postContainer" scrollFlag="sixA">
-						<div class="post" id="post002">
+						<div class="post" id="post006">
 							<div class="title">6A - Post Merge Conflicts</div>
 							<div class="body">
 								
@@ -608,7 +607,7 @@
 					</div>
 
 					<div class="postContainer" scrollFlag="sixB">
-						<div class="post" id="post002">
+						<div class="post" id="post006">
 							<div class="title">6B - Pull Requests</div>
 							<div class="body">
 								
@@ -656,7 +655,7 @@
 					</div>
 					
 					<div class="postContainer" scrollFlag="sevenA">
-						<div class="post" id="post001">
+						<div class="post" id="post007">
 							<div class="title">7 - History</div>
 							<div class="body">
 								

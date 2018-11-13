@@ -173,7 +173,9 @@ function AdjustWindowSensitiveVariables()
 			
 			$('.imageHolder').css('left','-3vw');
 			
-			$('.imageHolder').css({'left':'-20vw', 'width':'90vw'});
+			$('.imageHolder').css({'left':'-10vw', 'width':'90vw', 'min-height':'35vw'});
+			
+			$('.body').css({'width':'80%', 'font-size':'1em'});
 		break;
 		
 		case 2:
@@ -181,7 +183,8 @@ function AdjustWindowSensitiveVariables()
 			Shift(0);
 			stepSize = 90;
 			
-			$('.imageHolder').css({'left':'-5vw', 'width':'60vw'});
+			$('.imageHolder').css({'left':'-12vw', 'width':'70vw', 'min-height':'28vw'});
+			$('.body').css({'width':'70%', 'font-size':'1.1em'});
 		break;
 		
 		case 3:
@@ -189,7 +192,9 @@ function AdjustWindowSensitiveVariables()
 			Shift(0);
 			stepSize = 70;
 			
-			$('.imageHolder').css({'left':'-5vw', 'width':'50vw'});
+			$('.imageHolder').css({'left':'-8vw', 'width':'50vw', 'min-height':'24vw'});
+			
+			$('.body').css({'width':'60%', 'font-size':'1.1em'});
 		break;
 		
 		case 4:
@@ -197,7 +202,9 @@ function AdjustWindowSensitiveVariables()
 			Shift(0);
 			stepSize = 65;
 			
-			$('.imageHolder').css({'left':'-11vw', 'width':'50vw'});
+			$('.imageHolder').css({'left':'-11vw', 'width':'50vw', 'min-height':'22vw'});
+			
+			$('.body').css({'width':'60%', 'font-size':'1.3em'});
 		break;
 	}
 }
