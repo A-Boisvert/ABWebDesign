@@ -6,12 +6,12 @@
 	body
 	{
 		margin: 0;
-		background-color: #161340;
 		font-size: 12pt;
 		--post001Color: #5a8bd6;
 		/* --bgDarkBlue: #0e132f; */
-		--bgDarkBlue: #161340;
+		--bgDarkBlue: #0b0b23;
 		--borderColor: #a7c3ed;
+		background-color: var(--bgDarkBlue);
 		
 		--postColor01: #30289E;
 		--postColor02: #2A238D;
@@ -177,11 +177,11 @@
 	.navDot p
 	{
 		position: absolute;
-		top: -15%;
+		top: -30%;
 		left: 25%;
-		font-family: sans-serif;
+		font-family: 'PT Sans Narrow', sans-serif;
 		font-weight: bold;
-		font-size: 16pt;
+		font-size: 1.5em;
 		color: var(--bgDarkBlue);
 	}
 	
@@ -234,7 +234,7 @@
 		left: 50%;
 		height: 100%;
 		position: relative;
-		width: 1vh;
+		width: 0.25vh;
 		background-color: #a7c3ed;
 		z-index: -1;
 	}
@@ -243,8 +243,8 @@
 		left: 50%;
 		height: 100%;
 		position: fixed;
-		width: 1vh;
-		background-color: #a7c3ed;
+		width: 0.25vh;
+		background-color: var(--borderColor);
 		z-index: -1;
 		transition: all .2s cubic-bezier(1,.01,1,.01) .1s;
 	}
@@ -271,7 +271,8 @@
 		position: relative;
 		top: 50%;
 		width: 100%;
-		background-color: black;
+		background-color: var(--borderColor);
+		border: solid 0.25vh var(--borderColor);
 	}
 	.post
 	{
@@ -289,7 +290,7 @@
 		min-height: 50px;
 		border: dashed 1px /#444444;
 		font-family: 'PT Sans Narrow', sans-serif;
-		font-size: 6em;
+		font-size: 5em;
 		color: white;
 		text-align: center;
 		text-transform: uppercase;
@@ -310,7 +311,7 @@
 	
 	.imageHolder
 	{
-		width: 50vw;
+		width: 40vw;
 		min-height: 35vw;
 		position: relative;
 		left: -11vw;
@@ -347,10 +348,6 @@
 		position: relative;
 		top: -55px;
 		font-size: 3em;
-	}
-	#post001 .stemHorizontal
-	{
-		background-color: red;
 	}
 	#post002 
 	{

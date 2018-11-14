@@ -202,7 +202,7 @@ function AdjustWindowSensitiveVariables()
 			Shift(0);
 			stepSize = 65;
 			
-			$('.imageHolder').css({'left':'-11vw', 'width':'50vw', 'min-height':'22vw'});
+			$('.imageHolder').css({'left':'-5vw', 'width':'40vw', 'min-height':'22vw'});
 			
 			$('.body').css({'width':'60%', 'font-size':'1.3em'});
 		break;
