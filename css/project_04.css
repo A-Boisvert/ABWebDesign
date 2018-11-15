@@ -1,0 +1,119 @@
+	*
+	{
+		box-sizing: border-box;
+	}
+	
+	body
+	{
+		margin: 0;
+		font-size: 12pt;
+		--post001Color: #5a8bd6;
+		/* --bgDarkBlue: #0e132f; */
+		--bgDarkBlue: #0b0b23;
+		--borderColor: #a7c3ed;
+		background-color: var(--bgDarkBlue);
+		
+		--postColor01: #30289E;
+		--postColor02: #2A238D;
+		--postColor03: #251E7B;
+		--postColor04: #1F1A6A;
+		--postColor05: #191558;
+		--postColor06: #141047;
+		--postColor07: #0E0B35;
+	}
+	
+	[scrollFlag]
+	{
+		
+	}
+	
+	html
+	{
+		
+	}
+	
+	p
+	{
+		color: white;
+		font-size: 48pt;
+		font-family: Karla;
+	}
+	
+	.debugBlock
+	{
+		position: fixed;
+		background-color: black;
+		min-width: 10px;
+		min-height: 10px;
+		top: 0;
+		left: 0;
+		z-index: 100;
+		padding: 0 5px;
+		color: white;
+	}
+	.mobile, .tablet, .desktop, .largeDesktop
+	{
+		display: none;
+	}
+	
+	
+/* Big Desktop */
+@media screen and (min-width: 1025px)	
+{
+	.mobile, .tablet, .dekstop
+	{
+		display: none;
+	}
+	.largeDesktop
+	{
+		display: block;
+	}
+	
+	
+}
+
+/* Desktop */
+@media screen and (max-width: 1024px)	
+{
+	.mobile, .tablet, .largeDesktop
+	{
+		display: none;
+	}
+	.desktop
+	{
+		display: block;
+	}
+	
+	
+}	
+
+/* Tablet */
+@media screen and (max-width: 768px)	
+{
+	.mobile, .desktop, .largeDesktop
+	{
+		display: none;
+	}
+	.tablet
+	{
+		display: block;
+	}
+	
+	
+	
+}
+
+/* Mobile */
+@media screen and (max-width: 482px)
+{
+	.mobile
+	{
+		display: block;
+	}
+	.tablet, .dektop, .largeDesktop
+	{
+		display: none;
+	}
+	
+	
+}

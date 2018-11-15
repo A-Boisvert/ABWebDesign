@@ -188,6 +188,12 @@
 		overflow:hidden;
 	}
 	
+	.horizontalMockupHolder
+	{
+		height: 35vh;
+		width: 250vw;
+	}
+	
 	.imgHalfFrame
 	{
 		width: 30%;
@@ -210,6 +216,11 @@
 		float:left;
 		overflow:hidden;
 		border: 5px solid #2b2b2b;
+	}
+	.imgSmallFrame img
+	{
+		position: relative;
+		left: -30%;
 	}
 	.imgSmallFrame:hover
 	{
