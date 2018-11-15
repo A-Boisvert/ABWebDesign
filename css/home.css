@@ -192,6 +192,17 @@
 	{
 		height: 35vh;
 		width: 250vw;
+		
+	}
+	.MockupDesc
+	{
+		width: 40vw;
+		height: 50vh;
+	}
+	.MockupDesc p
+	{
+		text-transform: none;
+		padding: 10px;
 	}
 	
 	.imgHalfFrame
