@@ -129,19 +129,19 @@ function Grade()
 			break;
 			
 			case 2:
-			$('.hint').append("<br><br>Hint 2/4: The letters of these Hexadecimal colors could be considered 'overflows' of the numbers. In the terms of math, 'A' can be considered as '10', etc.");
+			$('.hint').text("Hint 2/4: The letters of these Hexadecimal colors could be considered 'overflows' of the numbers. In the terms of math, 'A' can be considered as '10', etc.");
 			break;
 			
 			case 3:
-			$('.hint').append("<br><br>Hint 3/4: Right Click > Inspect > Click Console Tab > Copy the 'solutionString' for the answer<br>The next hint will just be the answer");
+			$('.hint').text("Hint 3/4: Right Click > Inspect > Click Console Tab > Copy the 'solutionString' for the answer<br>The next hint will just be the answer");
 			break;
 			
 			case 4:
-			$('.hint').append("<br><br>Hint 4/4: " + solutionString);
+			$('.hint').text("Hint 4/4: " + solutionString);
 			break;
 			
 			case 5:
-			$('.hint').append("<br><br>The answer is: " + solutionString);
+			$('.hint').text("The answer is: " + solutionString);
 			break;
 		}
 	}
