@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+
+<html>
+
+	<head>
+		<title>Boisvert E13 - Color Additon and Subtraction</title>
+		
+		<link rel="stylesheet" type="text/css" href="../css/exercise_13.css">
+		
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+		<link href="https://fonts.googleapis.com/css?family=Karla:400,400i,700" rel="stylesheet">
+		
+	</head>
+	
+	<body>
+			
+		<!-- <div class="debugBox"></div> -->
+		<div class="hint">
+			You must type the '#' every time. 
+			<br>However, letters do not need to be capitalized.
+		</div>
+		
+		<div class="container">
+			<div class="operationContainer">
+			
+				<div class="colorContainer">
+					<div class="colorSquare">
+						<div class="actualColor" id="a"></div>
+					</div>
+					<div class="colorHexBox">
+						<p>#FF0000</p>
+					</div>
+				</div>
+				
+				<div class="colorSquare">
+					<div class="operationHolder">
+						<p>+</p>
+					</div>
+				</div>
+				
+				<div class="colorContainer">
+					<div class="colorSquare">
+						<div class="actualColor" id="b"></div>
+					</div>
+					<div class="colorHexBox">
+						<p>#0000FF</p>
+					</div>
+				</div>
+				
+				<div class="colorSquare">
+					<div class="operationHolder">
+						<p>=</p>
+					</div>
+				</div>
+				
+				<div class="colorContainer">
+					<div class="colorSquare">
+						<div class="actualColor" id="c"></div>
+					</div>
+					<input class="colorHexBox" type="text" placeholder="#000000" maxlength="7" />
+					<!-- <input type="submit"/> -->
+				</div>
+			
+			</div>
+		</div>
+		
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		
+		<script type="text/javascript" src="../js/exercise_13.js"></script>
+			
+	</body>
+
+</html>
