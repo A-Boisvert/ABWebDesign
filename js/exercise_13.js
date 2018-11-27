@@ -125,7 +125,7 @@ function Grade()
 		switch(wrongCounter)
 		{
 			case 1:
-			$('.hint').text("Hint 1/4: This is additive blending which can be achieved by dividing the sum of two colors by 2.");
+			$('.hint').text("Hint 1/4: This is additive blending which can be achieved by dividing the sum of two colors by 2. When dealing with fractions, round down for this site.");
 			break;
 			
 			case 2:
