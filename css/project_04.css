@@ -10,14 +10,6 @@
 		--2b: #2b2b2b;
 		--parallelogramAccent: #6ff0e6;
 		background-color: black;
-		
-		--postColor01: #30289E;
-		--postColor02: #2A238D;
-		--postColor03: #251E7B;
-		--postColor04: #1F1A6A;
-		--postColor05: #191558;
-		--postColor06: #141047;
-		--postColor07: #0E0B35;
 	}
 	
 	.fullWindowContainer
@@ -83,11 +75,11 @@
 	.details
 	{
 		font-size: 1.5em;
-		font-color: var(--2b);
 		font-family: 'Gothic A1', sans-serif; 
 		font-weight: bold;
 		
 		padding-right: 1%;
+		padding-top: 0;
 		overflow-y: scroll;
 		border: solid 1px /blue;
 		width: 20%;
@@ -97,22 +89,26 @@
 		bottom: 15%;
 		z-index: 1;
 	}
-	
-	[scrollFlag]
+	.details p
 	{
-		
+		margin: 0;
+		color: var(--2b);
 	}
 	
-	html
+	.title
 	{
+		font-family: 'Fjalla One', sans-serif; 
+		font-weight: bold;
 		
+		border: solid 2px /purple;
+		width: 100%;
+		padding-bottom: 2%;
 	}
-	
-	p
+	.title p
 	{
-		color: white;
-		font-size: 48pt;
-		font-family: Karla;
+		border: solid 1px /white;
+		margin: 0;
+		color: var(--2b);
 	}
 	
 	.debugBlock
@@ -145,7 +141,6 @@
 		display: block;
 	}
 	
-	
 }
 
 /* Desktop */
@@ -172,13 +167,10 @@
 	.details
 	{
 		font-size: 1.3em;
-		
-		width: 25%;
+		padding-right: 0.5%;
+		width: 24%;
 		height: 80%;
-		position: absolute;
-		left: 75%;
-		bottom: 15%;
-		z-index: 1;
+		left: 76%;
 	}
 	
 	.ParallelogramNavButton
@@ -203,7 +195,65 @@
 		display: block;
 	}
 	
+	.NavButtonContainer
+	{
+		position: absolute;
+		left: 5%;
+		bottom: 2.5%;
+		/* details bottom + this height + 1/2 details height */
+		width: 30%;
+		height: 45.5%;
+		border: dashed 1px /red;
+		z-index: 1;
+	}
+	.ParallelogramNavButton
+	{
+		border: solid 2px /green;
+		width: 100%;
+		height: 8%;
+		transform: skew(0deg, -10deg);
+	}
+	.ParallelogramNavSpace
+	{
+		border: solid 2px /yellow;
+		height: 2%;
+	}
 	
+	.fullWindowContainer
+	{
+		position: absolute;
+		margin: /10vh /10vw;
+		height: /80vh;
+		width: /80vw;
+		overflow: /visible;
+	}
+	
+	.paraLeft
+	{
+		height: 65vh;
+		width: 100vw;
+		bottom: -10vh;
+		left: 0%;
+		transform: skew(0deg, -10deg);
+		border: solid 1px /red;
+		z-index: 1;
+	}
+	
+	.paraRight
+	{
+		left: 150%;
+	}
+	
+	.details
+	{
+		font-size: 1em;
+		padding-right: 0.5%;
+		left: 45%;
+		width: 50%;
+		height: 45.5%;
+		bottom: 5%;
+		border: solid 1px /blue;
+	}
 	
 }
 
@@ -219,5 +269,22 @@
 		display: none;
 	}
 	
+	.NavButtonContainer
+	{
+		height: 42.5%;
+	}
+	
+	.details
+	{
+		border: solid 1px /blue;
+		left: 45%;
+		width: 50%;
+		height: 42%;
+	}
+	
+	.paraLeft
+	{
+		height: 60vh;
+	}
 	
 }

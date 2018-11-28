@@ -1,5 +1,6 @@
 $(document).ready(function(){
 
+	$(".title").fitText(0.5);
 	
 	$(window).resize(function() {
 		
