@@ -56,6 +56,10 @@
 	}
 	.block:hover
 	{
+		background-color: #295499 !important;
+	}
+	.block:hover
+	{
 		/background-color: #295499 !important;
 		/height: 30vh;
 		/display: block;
