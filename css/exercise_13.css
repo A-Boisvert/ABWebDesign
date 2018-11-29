@@ -6,6 +6,7 @@
 	{
 		margin: 0;
 		background-color: #dddddd;
+		font-size: 12pt;
 	}
 	
 	.container
@@ -94,9 +95,9 @@
 		border: solid /2px white;
 		font-family: Karla, sans serif;
 		color: black;
-		font-size: 2vw;
+		font-size: 2em;
 		font-weight: bold;
-		width: 50vw;
+		width: 98vw;
 		position: fixed;
 		bottom: 1vh;
 		left: 1vh;
@@ -156,6 +157,15 @@
 		height: 100%;
 	}
 	
+@media screen and (max-width: 800px)	
+{
+	.hint
+	{
+		width: 98vw;
+		font-size: 1.5em;
+	}
+	
+}
 	
 	
 	
