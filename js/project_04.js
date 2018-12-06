@@ -11,8 +11,8 @@ $(document).ready(function(){
 		}, 500, "some unique string");
 	});
 	
-	$(".hamburger").click(function(){
-		
+	$(".details").scroll(function(){
+		console.log("ggg");
 	});
 	
 	
