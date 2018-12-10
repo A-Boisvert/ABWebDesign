@@ -1,7 +1,46 @@
 	*
 	{
 		box-sizing: border-box;
-	}
+	}	
+	
+	/* ALL */
+	
+		/.debugBlock
+		{
+			position: fixed;
+			background-color: black;
+			min-width: 10px;
+			min-height: 10px;
+			bottom: 0;
+			left: 0;
+			z-index: 100;
+			padding: 0 5px;
+			color: white;
+		}
+		.dB2
+		{
+			bottom: 16px;
+		}
+		.dB3
+		{
+			bottom: 32px;
+		}
+		
+		.mobile, .tablet, .desktop, .largeDesktop
+		{
+			display: none;
+		}
+		
+		.test
+		{
+			width: 50px;
+			height: 50px;
+			background-color: /white;
+			position: relative;
+			top: 0;
+			left: 0;
+			z-index: 100;
+		}
 	
 	body
 	{
@@ -12,81 +51,166 @@
 		background-color: black;
 	}
 	
-	.topNavBar
-	{
-		position: fixed;
-		top: 0;
-		left: 0;
-		width: 100vw;
-		height: 3em;
-		background-color: var(--2b);
-		border-bottom: solid 0.2vh var(--parallelogramAccent);
-	}
-	.topNavBarTextContainer p
-	{
-		padding: 0;
-		font-size: 2.5em;
-		font-family: 'Gothic A1', sans-serif; 
-		font-weight: bold;
-		text-transform: uppercase;
-		border: solid 1px /white;
-		margin: 0;
-		
-		color: var(--parallelogramAccent);
-	}
-	.topNavBarTextContainer
-	{
-		width: calc(100% - 1em);
-		left: 1em;
-		position: relative;
-		height: 100%;
-		border: solid 1px /green;
-	}
-	.topParallelogramContainer
-	{
-		width: 30%;
-		height: 100%;
-		border: solid 1px /yellow;
-		position: relative;
-		float: left;
-		left: 5%;
-	}
-	.topParallelogramNavButton
-	{
-		margin-left: 5%;
-		position: relative;
-		float: left;
-		width: 1em;
-		height: 90%;
-		left: 0;
-		top: 0;
-		transform: skew(-10deg);
-		background-color: var(--parallelogramAccent);
-	}
 	
-	.fullWindowContainer
+	.windowCon
+	{
+		width: 100vw;
+		height: 100vh;
+		margin: 0vh 0vw;
+		position: absolute;
+		overflow: hidden;
+		border: solid 2px /red;
+		z-index: /10;
+		background-color: transparent;
+	}
+	#belowNavBar
 	{
 		position: absolute;
 		margin: 0;
-		height: calc(100vh - 3em);
-		width: 100vw;
+		height: calc(100% - 3em);
+		width: calc(100% + 0px);
 		top: 3em;
 		background-color: var(--2b);
-		border: solid 1% black;
-		overflow: hidden;
+		border: solid 1vh /black;
+		overflow-x: hidden;
+		overflow-y: scroll;
 	}
-	
 	.ParallelogramBorder
 	{
 		position: absolute;
-		width: 50%;
 		height: 100%;
 		transform: skew(-10deg);
 		background-color: var(--parallelogramAccent);
-		z-index: 0;
+		/background-color: transparent;
+		border: dashed /blue;
+		z-index: 1;
+	}
+	.paraLeft
+	{
+		left: -5.5%;
+		width: 10%;
+	}
+	.paraRight
+	{
+		width: 50%;
+		right: -5.5%;
+	}
+	.info
+	{
+		font-size: 1.5em;
+		font-family: 'Gothic A1', sans-serif; 
+		font-weight: bold;
+		padding-right: 1%;
+		padding-top: 0;
+		border: solid 1px /blue;
+		position: absolute;
+		z-index: 2;
+		overflow-y: scroll;
+		
+		border: solid /gray;
+	}
+	.infoFullStretch
+	{
+		border: solid /green;
+	}
+	.infoBody
+	{
+		width: 90%;
+		border: solid /black;
+		position: absolute;
+		float: left;
+		padding-right: 10%;
+	}
+	.customScrollBar
+	{
+		height: 95.5%;
+		width: 0.5em;
+		border: solid /white;
+		position: absolute;
+		right: 10%;
+		top: 0;
+	}
+	.scrollIndex
+	{
+		width: 100%;
+		height: 2em;
+		background-color: #2b2b2b;
+		position: absolute;
+		top: 0;
+		border-radius: 5px;
 	}
 	
-	.HomeNavButtonContainer
+		#topNavBar
+		{
+			position: absolute;
+			z-index: 0;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 3em;
+			background-color: var(--2b);
+			border-bottom: solid 0.2vh var(--parallelogramAccent);
+		}
+		#topNavBar .buttonCon
+		{
+			height: 80vh;
+			border: solid 1px /yellow;
+			transform: skew(-10deg);
+			float: left;
+		}
+		#topNavBar .home
+		{
+			position: relative;
+			width: 8vw;
+			left: 3%;
+		}
+		#topNavBar .about
+		{
+			position: absolute;
+			width: 40vw;
+			right: -5.5%;
+		}
+		#topNavBar .button
+		{
+			margin-left: 0.4vw;
+			position: relative;
+			float: left;
+			width: 1em;
+			height: 2.3em;
+			left: 0;
+			top: 0.25em;
+			transform: /skew(-10deg);
+			background-color: var(--parallelogramAccent);
+			border: solid /green;
+		}
+		#topNavBar .textCon
+		{
+			/width: calc(100% - 2.5em);
+			/left: 1em;
+			position: absolute;
+			left: 3em;
+			height: 3em;
+			border: solid /#bbb;
+		}
+		#topNavBar .textCon p
+		{
+			padding: 0;
+			font-size: 2.5em;
+			font-family: 'Gothic A1', sans-serif; 
+			font-weight: bold;
+			text-transform: uppercase;
+			border: solid 1px /white;
+			margin: 0;
+			
+			color: var(--parallelogramAccent);
+		}
+	
+	#home #belowNavBar 
+	{
+		width: calc(100% + 18px);
+	}
+	
+	#home .navButtonCon
 	{
 		position: absolute;
 		left: 5%;
@@ -94,9 +218,9 @@
 		width: 90%;
 		height: 30%;
 		border: dashed 1px /red;
-		z-index: 1;
+		z-index: 5;
 	}
-	.HomeParallelogramNavSpace
+	#home .space
 	{
 		position: relative;
 		float: left;
@@ -104,8 +228,9 @@
 		height: 100%;
 		transform: skew(-10deg);
 		background-color: transparent;
+		border: solid /green;
 	}
-	.HomeParallelogramNavButton
+	#home .navButton
 	{
 		padding-left: 10px;
 		position: relative;
@@ -113,107 +238,199 @@
 		width: 18%;
 		height: 100%;
 		transform: skew(-10deg);
-		background-color: var(--parallelogramAccent);
+		background-color: /var(--parallelogramAccent);
 		overflow: hidden;
 		border: solid 5px var(--parallelogramAccent);
 	}
-	.HomeParallelogramNavButton img
+	#home .navButton img
 	{
 		position: relative;
-		height: 100%;
-		left: -150%;
+		max-width: 60em;
+		left: -30em;
 	}
-	.HomeParallelogramNavButton:nth-child(n+11)
+	#home .customScrollBar
 	{
-		top: 5%;
-		transform: skew(10deg);
+		height: 100%;
+		width: 1em;
+		border: solid /white;
+		right: 0%;
+	}
+	#home .scrollIndex
+	{
+		height: 2em;
+		background-color: var(--parallelogramAccent);
 	}
 	
-	.NavButtonContainer
-	{
-		position: absolute;
-		left: 75%;
-		bottom: 5%;
-		width: 20%;
-		height: 8%;
-		border: dashed 1px /red;
-		z-index: 1;
-	}
-	.ParallelogramNavSpace
-	{
-		position: relative;
-		float: left;
-		width: 1%;
-		height: 100%;
-		transform: skew(-10deg);
-		background-color: transparent;
-	}
-	.ParallelogramNavButton
-	{
-		padding-left: 10px;
-		position: relative;
-		float: left;
-		width: 9%;
-		height: 100%;
-		transform: skew(-10deg);
-		background-color: var(--2b);
-	}
-	
-	.paraLeft
-	{
-		left: -45.5%;
-	}
-	.paraRight
-	{
-		left: 65%;
-	}
-	
-	.details
-	{
-		font-size: 1.5em;
-		font-family: 'Gothic A1', sans-serif; 
-		font-weight: bold;
+		/* DETAILS */
 		
-		padding-right: 1%;
-		padding-top: 0;
-		overflow-y: scroll;
-		border: solid 1px /blue;
-		width: 20%;
-		height: 80%;
-		position: absolute;
-		left: 75%;
-		bottom: 15%;
-		z-index: 1;
-	}
-	.details p
-	{
-		margin: 0;
-		color: var(--2b);
-	}
+		#details #belowNavBar
+		{
+			overflow-y: hidden;
+		}
+		#details .info
+		{
+			width: calc(25% + 18px);
+			height: 80%;
+			left: 75%;
+			bottom: 15%;
+		}
+		#details .info p
+		{
+			margin: 0;
+			color: var(--2b);
+		}
+		#details .infoTitle
+		{
+			font-family: 'Fjalla One', sans-serif; 
+			font-weight: bold;
+			
+			border: solid 2px /purple;
+			width: 100%;
+			padding-bottom: 2%;
+		}
+		#details .infoTitle p
+		{
+			border: solid 1px /white;
+			margin: 0;
+			color: var(--2b);
+		}
+		#details .navButtonCon
+		{
+			position: absolute;
+			left: 75%;
+			bottom: 5%;
+			width: 20%;
+			height: 8%;
+			border: dashed 1px /red;
+			z-index: 5;
+		}
+		#details .space
+		{
+			position: relative;
+			float: left;
+			width: 1%;
+			height: 100%;
+			transform: skew(-10deg);
+			background-color: transparent;
+		}
+		#details .navButton
+		{
+			padding-left: 10px;
+			position: relative;
+			float: left;
+			width: 9%;
+			height: 100%;
+			transform: skew(-10deg);
+			background-color: var(--2b);
+		}
+		#details .imgRoulette
+		{
+			position: absolute;
+			border: solid /blue;
+			overflow: hidden;
+			background-color: red;
+			z-index: 0;
+		}
+		#details .imgRoulette img
+		{
+			height: auto;
+		}
+		#details .dA
+		{
+			left: -20em;
+		}
+		#details .dA img
+		{
+			min-width: 90em;
+		}
+		#details .dB
+		{
+			left: -25em;
+		}
+		#details .dB img
+		{
+			min-width: 105em;
+		}
+		#details .dC
+		{
+			left: -21em;
+		}
+		#details .dC img
+		{
+			min-width: 105em;
+		}
+		#details .dD
+		{
+			left: -21em;
+		}
+		#details .dD img
+		{
+			min-width: 137em;
+		}
+		#details .dE
+		{
+			left: -21em;
+		}
+		#details .dE img
+		{
+			min-width: 105em;
+		}
+		#details .dF
+		{
+			left: -21em;
+		}
+		#details .dF img
+		{
+			min-width: 105em;
+		}
+		#details .dG
+		{
+			left: -21em;
+		}
+		#details .dG img
+		{
+			min-width: 105em;
+		}
+		#details .dH
+		{
+			left: -21em;
+		}
+		#details .dH img
+		{
+			min-width: 105em;
+		}
+		#details .dI
+		{
+			left: -21em;
+		}
+		#details .dI img
+		{
+			min-width: 105em;
+		}
+		#details .dJ
+		{
+			left: -21em;
+		}
+		#details .dJ img
+		{
+			min-width: 105em;
+		}
 	
-	.aboutDetails
+	/* ABOUT */
+	
+	#about .info
 	{
-		font-size: 1.5em;
-		font-family: 'Gothic A1', sans-serif; 
-		font-weight: bold;
-		
-		padding-right: 1%;
-		padding-top: 0;
-		overflow-y: scroll;
-		border: solid 1px /blue;
 		width: 40%;
 		height: 80%;
-		position: absolute;
 		left: 15%;
 		bottom: 15%;
-		z-index: 1;
 	}
-	.aboutDetails p
+	#about .info p
 	{
 		margin: 0;
 		color: var(--parallelogramAccent);
 	}
-	.aboutTitle
+	#about .infoTitle
 	{
 		font-family: 'Fjalla One', sans-serif; 
 		font-weight: bold;
@@ -222,59 +439,26 @@
 		width: 100%;
 		padding-bottom: 2%;
 	}
-	.aboutTitle p
+	#about .infoTitle p
 	{
 		color: var(--parallelogramAccent);
 	}
-	
-	.title
-	{
-		font-family: 'Fjalla One', sans-serif; 
-		font-weight: bold;
-		
-		border: solid 2px /purple;
-		width: 100%;
-		padding-bottom: 2%;
-	}
-	.title p
-	{
-		border: solid 1px /white;
-		margin: 0;
-		color: var(--2b);
-	}
-	
-	.debugBlock
-	{
-		position: fixed;
-		background-color: black;
-		min-width: 10px;
-		min-height: 10px;
-		bottom: 0;
-		left: 0;
-		z-index: 100;
-		padding: 0 5px;
-		color: white;
-	}
-	
-	.mobile, .tablet, .desktop, .largeDesktop
-	{
-		display: none;
-	}
-	
+
 	
 /* Big Desktop */
-@media screen and (min-width: 1025px)	
+@media screen and (min-width: 1440px)	
 {
-	.mobile, .tablet, .dekstop
-	{
-		display: none;
-	}
-	.largeDesktop
-	{
-		display: block;
-	}
+		.mobile, .tablet, .dekstop
+		{
+			display: none;
+		}
+		.largeDesktop
+		{
+			display: block;
+		}
 	
-	.HomeNavButtonContainer
+	
+	#home .navButtonCon
 	{
 		position: absolute;
 		left: 5%;
@@ -284,7 +468,7 @@
 		border: dashed 1px /red;
 		z-index: 1;
 	}
-	.HomeParallelogramNavSpace
+	#home .space
 	{
 		position: relative;
 		float: left;
@@ -293,7 +477,7 @@
 		transform: skew(-10deg);
 		background-color: transparent;
 	}
-	.HomeParallelogramNavButton
+	#home .navButton
 	{
 		padding-left: 10px;
 		position: relative;
@@ -303,25 +487,26 @@
 		transform: skew(-10deg);
 		background-color: var(--parallelogramAccent);
 	}
-	.HomeParallelogramNavButton:nth-child(n+11)
+	
+	#home .scrollIndex
 	{
-		top: 0;
-		transform: skew(-10deg);
+		display: none;
 	}
 	
 }
 
 /* Desktop */
-@media screen and (max-width: 1024px)	
+@media screen and (max-width: 1440px)	
 {
-	.mobile, .tablet, .largeDesktop
-	{
-		display: none;
-	}
-	.desktop
-	{
-		display: block;
-	}
+		.mobile, .tablet, .largeDesktop
+		{
+			display: none;
+		}
+		.desktop
+		{
+			display: block;
+		}
+	
 	
 	.paraLeft
 	{
@@ -331,8 +516,42 @@
 	{
 		left: 65%;
 	}
+	.customScrollBar
+	{
+		height: 96.5%;
+	}
 	
-	.details
+		#home .navButtonCon
+		{
+			left: 5%;
+		}
+		#home .navButton img
+		{
+			position: relative;
+			max-width: 40em;
+			height: auto;
+			left: -15em;
+			top: -5em;
+		}
+		#home .navButton
+		{
+			width: 18%;
+		}
+		#home .navButton:nth-child(n+11)
+		{
+			top: 5%;
+			transform: skew(10deg);
+		}
+		#home .space
+		{
+			width: 2%;
+		}
+		#home .scrollIndex
+		{
+			display: none;
+		}
+	
+	#details .info
 	{
 		font-size: 1.3em;
 		padding-right: 0.5%;
@@ -340,66 +559,36 @@
 		height: 80%;
 		left: 78%;
 	}
-	
-	.NavButtonContainer
+	#details .navButtonCon
 	{
 		left: 78%;
 	}
-	.ParallelogramNavButton
+	#details .navButton
 	{
 		width: 8%;
 	}
-	.ParallelogramNavSpace
+	#details .space
 	{
 		width: 2%;
-	}
+	}	
+	#details .dA
+	{
+		left: -25em;
+	}	
 }	
 
 /* Tablet */
 @media screen and (max-width: 768px)	
 {
-	.mobile, .desktop, .largeDesktop
-	{
-		display: none;
-	}
-	.tablet
-	{
-		display: block;
-	}
-	
-	.NavButtonContainer
-	{
-		position: absolute;
-		left: 5%;
-		bottom: 2.5%;
-		/* details bottom + this height + 1/2 details height */
-		width: 30%;
-		height: 45.5%;
-		border: dashed 1px /red;
-		z-index: 1;
-	}
-	.ParallelogramNavButton
-	{
-		border: solid 2px /green;
-		width: 100%;
-		height: 8%;
-		transform: skew(0deg, -10deg);
-	}
-	.ParallelogramNavSpace
-	{
-		border: solid 2px /yellow;
-		height: 2%;
-	}
-	
-	.fullWindowContainer
-	{
-		position: absolute;
-		margin: /10vh /10vw;
-		height: /80vh;
-		width: /80vw;
-		overflow: /visible;
-	}
-	
+		.mobile, .desktop, .largeDesktop
+		{
+			display: none;
+		}
+		.tablet
+		{
+			display: block;
+		}
+		
 	.paraLeft
 	{
 		height: 65vh;
@@ -410,53 +599,239 @@
 		border: solid 1px /red;
 		z-index: 1;
 	}
-	
 	.paraRight
 	{
 		left: 150%;
 	}
-	
-	.details
+	.customScrollBar
 	{
-		font-size: 1em;
-		padding-right: 0.5%;
-		left: 45%;
-		width: 50%;
-		height: 45.5%;
-		bottom: 5%;
-		border: solid 1px /blue;
+		height: 94%;
+	}
+	#belowNavBar
+	{
+		position: absolute;
+		margin: /10vh /10vw;
+		height: /80vh;
+		width: /80vw;
+		overflow: /visible;
+	}
+		
+		#topNavBar .home
+		{
+			position: relative;
+			width: 8vw;
+			left: -4.5%;
+		}
+		#topNavBar .about
+		{
+			position: absolute;
+			width: 40vw;
+			right: 7.5%;
+		}
+		#topNavBar .textCon
+		{
+			left: 2em;
+		}
+		#topNavBar .textCon p
+		{
+			padding-top: 12.5%;
+			font-size: 1.5em;
+			font-family: 'Gothic A1', sans-serif; 
+			font-weight: bold;
+			text-transform: uppercase;
+			border: solid 1px /white;
+			margin: 0;
+			
+			color: var(--parallelogramAccent);
+		}
+	
+	#home .navButtonCon
+	{
+		position: absolute;
+		left: 5%;
+		bottom: 2.5%;
+		/* details bottom + this height + 1/2 details height */
+		width: 90%;
+		height: 200%;
+		border: dashed 1px /red;
+		z-index: 1;
+	}
+	#home .navButton img
+	{
+		position: relative;
+		max-width: 60em;
+		left: -15em;
+		top: -12.5em;
+	}
+	#home .navButton
+	{
+		border: solid 2px /green;
+		width: 100%;
+		height: 8%;
+		transform: skew(0deg, -10deg);
+	}
+	#home .navButton:nth-child(n+11)
+	{
+		top: 0;
+		width: 100%;
+		height: 8%;
+		transform: skew(0deg, -10deg);
+	}
+	#home .space
+	{
+		border: solid 2px /yellow;
+		height: 1%;
+	}
+	#home .scrollIndex
+	{
+		display: block;
 	}
 	
+		#details .info
+		{
+			font-size: 1em;
+			padding-right: 0.5%;
+			left: 45%;
+			width: calc(55.5% + 18px);
+			height: 45.5%;
+			bottom: 5%;
+			border: solid 1px /blue;
+		}
+		#details .navButtonCon
+		{
+			position: absolute;
+			left: 5%;
+			bottom: 2.5%;
+			/* details bottom + this height + 1/2 details height */
+			width: 30%;
+			height: 45.5%;
+			border: dashed 1px /red;
+			z-index: 1;
+		}
+		#details .navButton
+		{
+			border: solid 2px /green;
+			width: 100%;
+			height: 8%;
+			transform: skew(0deg, -10deg);
+		}
+		#details .space
+		{
+			border: solid 2px /yellow;
+			height: 2%;
+		}
+		#details .dA
+		{
+			left: -17.5em;
+			top: -7.5em;
+		}
+		#details .dA img
+		{
+			min-width: 100%;
+		}
+		#details .dB
+		{
+			left: -25em;
+			top: -15em;
+		}
+		#details .dB img
+		{
+			min-width: 100%;
+		}
 }
 
 /* Mobile */
 @media screen and (max-width: 482px)
 {
-	.mobile
-	{
-		display: block;
-	}
-	.tablet, .dektop, .largeDesktop
-	{
-		display: none;
-	}
-	
-	.NavButtonContainer
-	{
-		height: 42.5%;
-	}
-	
-	.details
-	{
-		border: solid 1px /blue;
-		left: 45%;
-		width: 50%;
-		height: 42%;
-	}
-	
+		.mobile
+		{
+			display: block;
+		}
+		.tablet, .dektop, .largeDesktop
+		{
+			display: none;
+		}
+		
 	.paraLeft
 	{
 		height: 60vh;
 	}
+	.customScrollBar
+	{
+		height: 93%;
+	}
 	
+		#topNavBar .home
+		{
+			position: relative;
+			width: 20vw;
+			left: -10.5%;
+		}
+		#topNavBar .about
+		{
+			position: absolute;
+			width: 20vw;
+			right: 35%;
+		}
+		#topNavBar .textCon
+		{
+			left: 2em;
+		}
+		#topNavBar .textCon p
+		{
+			padding-top: 12.5%;
+			font-size: 1.5em;
+			font-family: 'Gothic A1', sans-serif; 
+			font-weight: bold;
+			text-transform: uppercase;
+			border: solid 1px /white;
+			margin: 0;
+			
+			color: var(--parallelogramAccent);
+		}
+	
+	#home .navButtonCon
+	{
+		height: 150%;
+	}
+	#home .navButton
+	{
+		height: 12%;
+	}
+	#home .navButton:nth-child(n+11)
+	{
+		height: 12%;
+	}
+	#home .navButton img
+	{
+		position: relative;
+		max-width: 30em;
+		left: -5em;
+		top: -4em;
+	}
+	#home .scrollIndex
+	{
+		display: block;
+	}
+	
+		#details .navButtonCon
+		{
+			height: 42.5%;
+		}
+		#details .info
+		{
+			border: solid 1px /blue;
+			left: 45%;
+			width: calc(55% + 18px);
+			height: 42%;
+		}
+		#details .dA
+		{
+			left: -25em;
+			top: -7.5em;
+		}
+		#details .dA img
+		{
+			min-width: 50%;
+		}
 }
