@@ -245,13 +245,13 @@
 		{
 			position: relative;
 			width: 8vw;
-			left: 3%;
+			left: 5.4%;
 		}
 		#topNavBar .about
 		{
 			position: absolute;
 			width: 40vw;
-			right: -5.5%;
+			right: -5.4%;
 		}
 		#topNavBar .button
 		{
@@ -330,6 +330,21 @@
 		position: relative;
 		max-width: 60em;
 		left: -30em;
+		height: 100%;
+	}
+	.smallImg
+	{
+		width: 100em;
+	}
+	.realSmallImg
+	{
+		width: 400em;
+		height: 100%;
+	}
+	.slightlySmallImg
+	{
+		width: 300em;
+		height: 100%;
 	}
 	#home .customScrollBar
 	{
@@ -361,6 +376,16 @@
 		{
 			margin: 0;
 			color: var(--2b);
+		}
+		#details .info a
+		{
+			text-decoration: none;
+			color: var(--2b);
+		}
+		#details .info a:hover
+		{
+			text-decoration: none;
+			color: #4d4d4d;
 		}
 		#details .infoTitle
 		{
@@ -425,11 +450,12 @@
 		}
 		#details .dA
 		{
-			right: 30%;
+			right: 0%;
+			bottom: 0;
 		}
 		#details .dA img
 		{
-			min-width: 90em;
+			min-width: 120em;
 		}
 		#details .dB
 		{
@@ -450,7 +476,8 @@
 		}
 		#details .dD
 		{
-			left: -21em;
+			right: -0%;
+			bottom: -.2em;
 		}
 		#details .dD img
 		{
@@ -474,7 +501,7 @@
 		}
 		#details .dG
 		{
-			left: -21em;
+			left: -0em;
 		}
 		#details .dG img
 		{
@@ -482,7 +509,7 @@
 		}
 		#details .dH
 		{
-			left: -21em;
+			left: -10em;
 		}
 		#details .dH img
 		{
@@ -504,34 +531,6 @@
 		{
 			min-width: 105em;
 		}
-	
-	/* ABOUT */
-	
-	#about .info
-	{
-		width: 40%;
-		height: 80%;
-		left: 15%;
-		bottom: 15%;
-	}
-	#about .info p
-	{
-		margin: 0;
-		color: var(--parallelogramAccent);
-	}
-	#about .infoTitle
-	{
-		font-family: 'Fjalla One', sans-serif; 
-		font-weight: bold;
-		
-		border: solid 2px /purple;
-		width: 100%;
-		padding-bottom: 2%;
-	}
-	#about .infoTitle p
-	{
-		color: var(--parallelogramAccent);
-	}
 
 	
 /* Big Desktop */
@@ -561,7 +560,7 @@
 	{
 		position: relative;
 		float: left;
-		width: 1%;
+		width: 2%;
 		height: 100%;
 		transform: skew(-10deg);
 		background-color: transparent;
@@ -571,7 +570,7 @@
 		padding-left: 10px;
 		position: relative;
 		float: left;
-		width: 9%;
+		width: 8%;
 		height: 100%;
 		transform: skew(-10deg);
 		background-color: var(--parallelogramAccent);
@@ -663,7 +662,8 @@
 	}	
 	#details .dA
 	{
-		right: 25%;
+		top: 0;
+		left: -50%;
 	}
 	#details .dB
 	{
@@ -673,7 +673,29 @@
 	{
 		right: -7em;
 	}
-}	
+	#details .dD
+	{
+		right: -20em;
+	}
+	#details .dE
+	{
+		left: -20em;
+		bottom: 0;
+	}
+	#details .dG
+	{
+		left: -20em;
+	}
+	#details .dH
+	{
+		left: -25em;
+	}
+	#details .dJ
+	{
+		left: -40em;
+	}
+	
+}
 
 /* Tablet */
 @media screen and (max-width: 768px)	
@@ -873,6 +895,48 @@
 			top: -10%;
 			right: calc(100% - 60em);
 		}
+		#details .dD
+		{
+			bottom: 27em;
+			left: 0;
+		}
+		#details .dD img
+		{
+			min-width: 150%;
+		}
+		#details .dE
+		{
+			top: -30vw;
+			left: -10em;
+			width: 200vw;
+		}
+		#details .dE img
+		{
+			min-width: 100%;
+			width: 100%;
+		}	
+		#details .dF
+		{
+			left: 0em;
+			top: 0;
+			width: 155vw;
+		}
+		#details .dF img
+		{
+			min-width: 100%;
+			width: 100%;
+		}
+		#details .dJ
+		{
+			left: -10em;
+			top: -10em;
+			width: 215vw;
+		}
+		#details .dJ img
+		{
+			min-width: 100%;
+			width: 100%;
+		}
 }
 
 /* Mobile */
@@ -977,13 +1041,96 @@
 		}
 		#details .dB
 		{
-			right: -25em;
-			top: -14em;
-			bottom: 10em;
+			bottom: 0;
+			left: -20em;
+			top: 0;
+			width: 215vw;
 		}
-		#details .dC
+		#details .dB img
+		{
+			min-width: 100%;
+			width: 100%;
+		}
+		/*#details .dC
 		{
 			top: -10%;
 			right: calc(100% - 55em);
+		}*/
+		#details .dC
+		{
+			bottom: 0;
+			left: -15em;
+			top: 0;
+			width: 215vw;
+		}
+		#details .dC img
+		{
+			min-width: 100%;
+			width: 100%;
+		}
+		#details .dD
+		{
+			bottom: 25em;
+			left: -40%;
+		}
+		#details .dD img
+		{
+			min-width: 175%;
+		}
+		#details .dE
+		{
+			bottom: 0;
+			left: -10em;
+			top: 0;
+			width: 215vw;
+		}
+		#details .dE img
+		{
+			min-width: 100%;
+			width: 100%;
+		}	
+		#details .dF
+		{
+			left: -10em;
+			top: 0;
+			width: 215vw;
+		}
+		#details .dF img
+		{
+			min-width: 100%;
+			width: 100%;
+		}
+		#details .dH
+		{
+			left: -10em;
+			top: 0;
+			width: 215vw;
+		}
+		#details .dH img
+		{
+			min-width: 100%;
+			width: 100%;
+		}
+		#details .dI
+		{
+			left: -15em;
+			top: 0;
+			width: 215vw;
+		}
+		#details .dI img
+		{
+			min-width: 100%;
+			width: 100%;
+		}
+		#details .dJ
+		{
+			left: -13.5em;
+			top: 0;
+			width: 215vw;
+		}
+		#details .dJ img
+		{
+			min-width: 100%;
+			width: 100%;
 		}
 }

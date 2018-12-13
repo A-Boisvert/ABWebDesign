@@ -37,21 +37,12 @@ $(document).ready(function(){
 	
 	$('#imageScroll .scrollIndex').mousedown(function() {
 		
-		$('.scrollWarning').css({'opacity':'1', 'right':'0', 'z-index':'5'});
-	
+		if (currentWindowSize > 2)
+			$('.scrollWarning').css({'opacity':'1', 'right':'0', 'z-index':'5'});
+		else
+			$('.scrollWarning').css({'opacity':'1', 'right':'-600%', 'z-index':'5', 'height':'4em'});
 	});
 	
-	/*$('#details .imgRoulette').mouseenter(function() {
-		
-		$('#imageScroll .scrollIndex').css('background-color', '#2b2b2b');
-	
-	});
-	
-	$('#details .imgRoulette').mouseleave(function() {
-		
-		$('#imageScroll .scrollIndex').css('background-color', '#6ff0e6');
-	
-	});*/
 	
 	$(".info").scroll(function(){
 		MatchCustomScrollBar($(this));
@@ -237,10 +228,22 @@ function CheckWindowSize()
 	
 	if ($(".infoBody").css('height') < $(".info").css('height'))
 	{
+		console.log("LESS THAN - " + 
+		"body h: " + $(".infoBody").css('height') + 
+		" / title h: " + $(".infoTitle").css('height') + 
+		"vs info h: " + $(".info").css('height')
+		);
+		
 		$(".infoFullStretch .customScrollBar .scrollIndex").css('opacity', '0');
 	}
 	else
 	{
+		console.log("GREATER THAN - " + 
+		"body h: " + $(".infoBody").css('height') + 
+		" / title h: " + $(".infoTitle").css('height') + 
+		"vs info h: " + $(".info").css('height')
+		);
+		
 		$(".infoFullStretch .customScrollBar .scrollIndex").css('opacity', '1.0');
 	}
 	

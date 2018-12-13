@@ -235,6 +235,28 @@
 		border: 5px solid white;
 	}
 	
+	.imgFinalFrame
+	{
+		width: 30%;
+		height: 100%;
+		float:left;
+		overflow:hidden;
+		border: 5px solid #6ff0e6;
+		margin: 0;
+		padding: 0;
+	}
+	.imgFinalFrame img
+	{
+		width: 15em;
+		top: -5em;
+	}
+	.imgFinalFrame:hover
+	{
+		width: 30%;
+		height: 100%;
+		border: 5px solid white;
+	}
+	
 	.imgSmallFrame
 	{
 		width: 15%;
