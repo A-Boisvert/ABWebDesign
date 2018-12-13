@@ -1,8 +1,9 @@
 $(document).ready(function(){
 
 	InitializeRoulette();
+	CheckWindowSize();
 
-	$(".infoTitle").fitText(0.5);
+	$(".infoTitle").fitText(1);
 	$('.dB2').text(' ' + currentWindowSize + " - " + $(window).width());
 	
 	/*$(window).bind('mousewheel DOMMouseScroll', function(event){
@@ -24,18 +25,46 @@ $(document).ready(function(){
 		
 		CheckWindowSize();
 		
+		
+		//$('#imageScroll .heightToScroll').css('height', scrollHeightMultiplier * numberOfImages + outerHeight + 'px');
+		//scrollBarLimit = parseInt($('#imageScroll .scrollBarPercentLimit').height);
+		
 		waitForFinalEvent(function(){
 			//alert('Resize...');
 			
 		}, 500, "some unique string");
 	});
 	
+	$('#imageScroll .scrollIndex').mousedown(function() {
+		
+		$('.scrollWarning').css({'opacity':'1', 'right':'0', 'z-index':'5'});
+	
+	});
+	
+	/*$('#details .imgRoulette').mouseenter(function() {
+		
+		$('#imageScroll .scrollIndex').css('background-color', '#2b2b2b');
+	
+	});
+	
+	$('#details .imgRoulette').mouseleave(function() {
+		
+		$('#imageScroll .scrollIndex').css('background-color', '#6ff0e6');
+	
+	});*/
+	
 	$(".info").scroll(function(){
-		SetScrollBar($(this));
+		MatchCustomScrollBar($(this));
 	});
 	
 	$("#belowNavBar").scroll(function(){
-		SetScrollBar($(this));
+		MatchCustomScrollBar($(this));
+	});
+	
+	$("#imageScroll .window .offset").scroll(function(){
+		MatchCustomScrollBar($(this));
+		MatchImageToScroll();
+		$('.scrollWarning').css({'opacity':'0', 'right':'-500%'});
 	});
 	
 	$(".mobile, .tablet, .dekstop, .largeDesktop").click(function()
@@ -60,26 +89,50 @@ var imagePrefix;
 var imageSuffix;
 var folder;
 var numberOfImages;
+var scrollHeightMultiplier;
+var scrollBarLimit = 96;
 
 var isBroken = false;
 
 var currentWindowSize = 0;
 
-function SetScrollBar (target)
+function AdjustSrcURL (index, directory)
+{
+	if (index < 10)
+	{
+		directory.src = folder + imagePrefix + "00" + index + imageSuffix + fileExtension;
+	}
+	else if (index < 100)
+	{
+		directory.src = folder + imagePrefix + "0" + index + imageSuffix + fileExtension;
+	}
+	else 
+	{
+		directory.src = folder + imagePrefix + index + imageSuffix + fileExtension;
+	}
+}
+
+function MatchCustomScrollBar (target)
 {
 	scrollTop = target.scrollTop();
 	
 	scrollHeight = target.prop('scrollHeight');
 	outerHeight = target.outerHeight();
-	scrollPercentage = Math.min(scrollTop / (scrollHeight - outerHeight), 0.95);
+	scrollPercentage = Math.min(Math.round(100 * scrollTop / (scrollHeight - outerHeight)) / 100, 0.95);
 
-	$('.customScrollBar').css('top', scrollTop);
+	target.find('.customScrollBar').css('top', scrollTop);
 	
-	$('.scrollIndex').css('top', scrollPercentage * 100 + "%");
+	//scrollPercentage = Math.round(100 * imageIndex / numberOfImages) / 100;
+	target.find('.scrollIndex').css('top', scrollPercentage * scrollBarLimit + "%");
+	//target.find('.scrollIndex').css('top', imageIndex / numberOfImages * 100 + "%");
 	
-	$('.dB3').text("scrollTop: " + scrollTop + " OuterHeight: " + outerHeight + " /  ScrollHeight: " + scrollHeight + " /  percent: " + scrollPercentage + " / 	imgListLength: " + imgListLength + " /	imageIndex: " + imageIndex
+	$('.dB3').text("scrollTop: " + scrollTop + " OuterHeight: " + outerHeight + " /  ScrollHeight: " + scrollHeight + " /  percent: " + scrollPercentage + " / 	imgListLength: " + imgListLength + " /	imageIndex: " + imageIndex + " / " + 
+	"ScrollBarLimit: " + scrollBarLimit
 	);
-	
+}
+
+function MatchImageToScroll ()
+{
 	if (imageIndex < 10)
 	{
 		$('.imgRoulette img').attr(
@@ -100,6 +153,7 @@ function SetScrollBar (target)
 	}
 	
 	imageIndex = Math.round(scrollPercentage * imgListLength + 1);
+	//imageIndex = Math.round(scrollTop / 100) + 1;
 }
 
 function InitializeRoulette ()
@@ -109,8 +163,11 @@ function InitializeRoulette ()
 	imagePrefix = $('.imagePrefix').text();
 	imageSuffix = $('.imageSuffix').text();
 	numberOfImages = parseInt($('.numberOfImages').text()) + 1;
+	scrollHeightMultiplier = parseInt($('.imageScrollMultiplier').text());
+	scrollBarLimit = 96;
 	
 	folder = "../../../images/p4/" + pageID + "/";
+	$('#imageScroll .heightToScroll').css('height', (100 / scrollHeightMultiplier) * numberOfImages + outerHeight + 'px');
 	
 	var imgList = [];
 	var imgDir = new Image();
@@ -118,18 +175,7 @@ function InitializeRoulette ()
 	
 	for	(i = 1; i < numberOfImages; i++)
 	{
-		if (i < 10)
-		{
-			imgDir.src = folder + imagePrefix + "00" + i + imageSuffix + fileExtension;
-		}
-		else if (i < 100)
-		{
-			imgDir.src = folder + imagePrefix + "0" + i + imageSuffix + fileExtension;
-		}
-		else 
-		{
-			imgDir.src = folder + imagePrefix + i + imageSuffix + fileExtension;
-		}
+		AdjustSrcURL(i, imgDir);
 		
 		checkImage(imgDir.src, 
 		function(){ AddToLength(); }, 
@@ -169,13 +215,34 @@ function AddToLength ()
 function CheckWindowSize()
 {
 	if ($(window).width() > 1024)
+	{
 		currentWindowSize = 4;
-	else if ($(window).width() <= 1024)
+		scrollBarLimit = 96;
+	}
+	if ($(window).width() <= 1024)
+	{
 		currentWindowSize = 3;
+		scrollBarLimit = 96;
+	}
 	if ($(window).width() <= 768)
+	{
 		currentWindowSize = 2;
+		scrollBarLimit = 100;
+	}
 	if ($(window).width() <= 482)
+	{
 		currentWindowSize = 1;
+		scrollBarLimit = 100;
+	}
+	
+	if ($(".infoBody").css('height') < $(".info").css('height'))
+	{
+		$(".infoFullStretch .customScrollBar .scrollIndex").css('opacity', '0');
+	}
+	else
+	{
+		$(".infoFullStretch .customScrollBar .scrollIndex").css('opacity', '1.0');
+	}
 	
 	$('.dB2').text(currentWindowSize + " - " + $(window).width());
 	
